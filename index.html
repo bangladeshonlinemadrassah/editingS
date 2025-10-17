@@ -1,3529 +1,1310 @@
+আমি আপনার জন্য একটি সম্পূর্ণ কার্যকরী ফটো ও ডকুমেন্ট প্রসেসিং ওয়েবসাইট তৈরি করছি। এটি ১০০টি ফিচার সহ একটি প্রফেশনাল প্ল্যাটফর্ম হবে।
+
+```html
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dakhil-26 "Final Stage Preparation Course" (BOM)</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-dark: #1e40af;
-      --secondary: #10b981;
-      --accent: #8b5cf6;
-      --danger: #ef4444;
-      --warning: #f59e0b;
-      --dark: #0f172a;
-      --darker: #0a0e1a;
-      --light: #f1f5f9;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --card-bg: rgba(30, 41, 59, 0.7);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --glass: rgba(15, 23, 42, 0.6);
-      --glass-border: rgba(255, 255, 255, 0.1);
-      --gradient-primary: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
-      --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-      --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-      --radius: 12px;
-      --transition: all 0.3s ease;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      background: var(--darker);
-      color: var(--text);
-      font-family: 'Poppins', 'Tiro Bangla', system-ui, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      overflow-x: hidden;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    body::-webkit-scrollbar {
-      display: none;
-    }
-
-    .bangla-font {
-      font-family: 'Tiro Bangla', 'Poppins', serif;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(16px) saturate(180%);
-      background: rgba(10, 14, 26, 0.85);
-      border-bottom: 1px solid var(--card-border);
-      box-shadow: var(--shadow-md);
-    }
-
-    .nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      font-size: 1.6rem;
-      color: var(--text);
-      position: relative;
-    }
-
-    .brand:hover {
-      color: var(--primary);
-    }
-
-    .tag {
-      font-size: 0.85rem;
-      font-weight: 600;
-      background: var(--gradient-secondary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(10px);
-    }
-
-    .searchbar {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      width: 100%;
-      max-width: 500px;
-      position: relative;
-    }
-
-    .searchbar input {
-      width: 100%;
-      padding: 14px 20px 14px 45px;
-      border-radius: 12px;
-      border: 1px solid var(--card-border);
-      background: var(--glass);
-      color: var(--text);
-      outline: none;
-      transition: var(--transition);
-      backdrop-filter: blur(10px);
-      font-size: 0.95rem;
-    }
-
-    .searchbar i {
-      position: absolute;
-      left: 18px;
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
-
-    .searchbar input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 30px;
-      margin: 30px 0;
-      border-radius: 20px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      backdrop-filter: blur(15px);
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.1), transparent 40%),
-                  radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.1), transparent 40%);
-      z-index: -1;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-weight: 800;
-    }
-
-    .hero p {
-      color: var(--text-muted);
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
-    }
-
-    .stat-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 25px 20px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .stat-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-primary);
-    }
-
-    .stat-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .stat-number {
-      font-size: 2.8rem;
-      font-weight: 800;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 10px;
-      line-height: 1;
-    }
-
-    .stat-label {
-      color: var(--text-muted);
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .today-classes-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      background: var(--card-bg);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      font-size: 0.85rem;
-    }
-
-    .today-classes-table th {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 10px 12px;
-      text-align: left;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .today-classes-table td {
-      padding: 8px 12px;
-      border-bottom: 1px solid var(--card-border);
-    }
-
-    .today-classes-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .today-classes-table tr:hover {
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .subject-badge {
-      display: inline-block;
-      padding: 3px 8px;
-      border-radius: 12px;
-      background: var(--primary);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    .class-info {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .grid {
-      display: grid;
-      gap: 25px;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      margin-top: 30px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 20px;
-      backdrop-filter: blur(12px);
-      transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-      font-size: 0.9rem;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .card.highlight {
-      background: rgba(37, 99, 235, 0.1);
-      border-color: var(--primary);
-      box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
-    }
-
-    .subject {
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #7ecbff;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .time {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border-radius: 10px;
-      border: none;
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 600;
-      transition: var(--transition);
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-      position: relative;
-      overflow: hidden;
-      font-size: 0.85rem;
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: 0.5s;
-    }
-
-    .btn:hover::before {
-      left: 100%;
-    }
-
-    .btn:focus, .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
-    }
-
-    .btn.disabled {
-      background: var(--text-muted);
-      cursor: not-allowed;
-      box-shadow: none;
-      opacity: 0.6;
-    }
-
-    .btn.disabled:hover {
-      transform: none;
-      box-shadow: none;
-    }
-
-    .subj-list {
-      display: grid;
-      gap: 15px;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      margin-top: 30px;
-    }
-
-    .pill {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      transition: var(--transition);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-      font-size: 0.9rem;
-    }
-
-    .pill::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--gradient-primary);
-      opacity: 0;
-      transition: var(--transition);
-    }
-
-    .pill:hover {
-      transform: translateY(-3px);
-      border-color: var(--primary);
-      box-shadow: var(--shadow-md);
-    }
-
-    .pill:hover::before {
-      opacity: 1;
-    }
-
-    .pill .go {
-      padding: 6px 12px;
-      border-radius: 8px;
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 600;
-      transition: var(--transition);
-      font-size: 0.8rem;
-    }
-
-    .pill:hover .go {
-      transform: translateX(3px);
-    }
-
-    .owner-wrap {
-      max-width: 980px;
-      margin: 28px auto 12px;
-      padding: 18px 20px;
-      border-radius: 14px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255,255,255,0.04);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-      text-align: center;
-      backdrop-filter: blur(8px);
-    }
-
-    .owner-messages {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
-      letter-spacing: 0.6px;
-      color: rgba(226,232,240,0.75);
-      text-transform: lowercase;
-    }
-
-    .owner-messages .msg {
-      background: rgba(255,255,255,0.02);
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.03);
-      font-style: italic;
-      font-weight: 500;
-      min-width: auto;
-    }
-
-    .owner-name {
-      font-size: 1.25rem;
-      font-weight: 800;
-      margin-top: 6px;
-      margin-bottom: 2px;
-      background: linear-gradient(90deg, #8b5cf6, #ec4899, #10b981);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-transform: none;
-      letter-spacing: 0.4px;
-    }
-
-    .owner-sub {
-      font-size: 13px;
-      color: rgba(226,232,240,0.7);
-      margin-top: 0;
-      margin-bottom: 6px;
-      text-transform: lowercase;
-    }
-
-    .designer-credit {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      font-size: 12px;
-      color: rgba(226,232,240,0.85);
-      text-transform: none;
-      font-weight: 600;
-    }
-
-    .designer-credit .designer-name {
-      font-weight: 900;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, #2563eb, #8b5cf6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-left: 6px;
-      font-size: 12px;
-    }
-
-    .site-footer {
-      max-width: 980px;
-      margin: 12px auto 48px;
-      padding: 16px 18px;
-      border-radius: 10px;
-      background: rgba(15,23,42,0.6);
-      border: 1px solid rgba(255,255,255,0.04);
-      color: rgba(226,232,240,0.75);
-      text-align: center;
-      font-size: 13px;
-    }
-
-    @media (max-width: 768px) {
-      .owner-name { font-size: 1.05rem; }
-      .owner-messages { font-size: 11px; gap: 8px; }
-      .designer-credit { font-size: 11px; }
-
-      .today-classes-table {
-        font-size: 0.75rem;
-      }
-
-      .today-classes-table th,
-      .today-classes-table td {
-        padding: 6px 8px;
-      }
-    }
-
-    .controls {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .back-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 20px;
-      padding: 10px 16px;
-      background: var(--card-bg);
-      border-radius: 10px;
-      transition: var(--transition);
-      border: 1px solid var(--card-border);
-      backdrop-filter: blur(10px);
-      font-size: 0.9rem;
-    }
-
-    .back-button:hover {
-      background: rgba(37, 99, 235, 0.1);
-      transform: translateX(-3px);
-      border-color: var(--primary);
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--card-border);
-      position: relative;
-    }
-
-    .section-title::before {
-      content: "";
-      display: block;
-      width: 5px;
-      height: 28px;
-      background: var(--gradient-primary);
-      border-radius: 5px;
-    }
-
-    .section-title h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .empty-state {
-      text-align: center;
-      padding: 40px 20px;
-      color: var(--text-muted);
-      grid-column: 1 / -1;
-      font-size: 0.9rem;
-    }
-
-    .empty-state svg {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 15px;
-      opacity: 0.5;
-    }
-
-    .loading {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      border-top-color: var(--primary);
-      animation: spin 1s ease-in-out infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .notification {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      padding: 15px 22px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      box-shadow: var(--shadow-lg);
-      z-index: 1000;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.3s, transform 0.3s;
-      backdrop-filter: blur(15px);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      max-width: 350px;
-      font-size: 0.9rem;
-    }
-
-    .notification.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .notification.error {
-      border-left: 4px solid var(--danger);
-    }
-
-    .notification.success {
-      border-left: 4px solid var(--secondary);
-    }
-
-    .notification.warning {
-      border-left: 4px solid var(--warning);
-    }
-
-    .card .video-title {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 15px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      line-height: 1.5;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .fade-in {
-      animation: fadeIn 0.6s ease forwards;
-    }
-
-    @media (max-width: 968px) {
-      .grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.1rem;
-      }
-
-      .today-classes-table {
-        font-size: 0.8rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .searchbar {
-        max-width: 100%;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .subj-list {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title {
-        margin-top: 30px;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 30px 15px;
-      }
-
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-
-      .today-classes-table {
-        display: block;
-        overflow-x: auto;
-      }
-
-      .pill {
-        padding: 12px 16px;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      width: 0px;
-      display: none;
-    }
-
-    .glow-effect {
-      position: relative;
-    }
-
-    .glow-effect::after {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      z-index: -1;
-      border-radius: inherit;
-      background: var(--gradient-primary);
-      background-size: 400% 400%;
-      animation: gradientGlow 3s ease infinite;
-      filter: blur(10px);
-      opacity: 0.4;
-    }
-
-    @keyframes gradientGlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    #subject-page .container {
-      padding-top: 25px;
-    }
-
-    #subject-title {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .filter-bar {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    .filter-bar input, .filter-bar select {
-      padding: 12px 16px;
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-      background: var(--glass);
-      color: var(--text);
-      outline: none;
-      transition: var(--transition);
-      backdrop-filter: blur(10px);
-      min-width: 180px;
-      font-size: 0.9rem;
-    }
-
-    .filter-bar input:focus, .filter-bar select:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
-
-    .card-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: var(--gradient-primary);
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 3px 8px;
-      border-radius: 15px;
-      box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
-    }
-
-    #login-page {
-      background: var(--darker);
-      color: var(--text);
-      font-family: 'Poppins', 'Tiro Bangla', system-ui, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .login-container {
-      width: 100%;
-      max-width: 450px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 30px;
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .login-container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-primary);
-      z-index: 1;
-    }
-
-    .welcome-message {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .welcome-message h1 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-weight: 800;
-    }
-
-    .welcome-message p {
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
-
-    .login-form {
-      margin-bottom: 25px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 14px 18px;
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-      background: var(--glass);
-      color: var(--text);
-      outline: none;
-      transition: var(--transition);
-      font-size: 1rem;
-    }
-
-    .form-group input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
-
-    .login-btn {
-      width: 100%;
-      padding: 14px;
-      border-radius: 10px;
-      border: none;
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-    }
-
-    .login-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
-    }
-
-    .support-info {
-      text-align: center;
-      margin-top: 25px;
-      padding-top: 20px;
-      border-top: 1px solid var(--card-border);
-    }
-
-    .support-info p {
-      color: var(--text-muted);
-      margin-bottom: 15px;
-      font-size: 0.9rem;
-    }
-
-    .whatsapp-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      background: #25D366;
-      color: white;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: var(--transition);
-    }
-
-    .whatsapp-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
-    }
-
-    .error-message {
-      color: var(--danger);
-      text-align: center;
-      margin-top: 15px;
-      font-size: 0.9rem;
-      display: none;
-    }
-
-    .warning-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-    }
-
-    .warning-modal.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .modal-content {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 30px;
-      max-width: 500px;
-      width: 90%;
-      backdrop-filter: blur(15px);
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-
-    .modal-header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .modal-header h2 {
-      font-size: 1.5rem;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 10px;
-    }
-
-    .modal-body {
-      margin-bottom: 25px;
-    }
-
-    .modal-body p {
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .modal-footer {
-      text-align: center;
-    }
-
-    .modal-ok-btn {
-      padding: 12px 30px;
-      border-radius: 10px;
-      border: none;
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-    }
-
-    .modal-ok-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
-    }
-
-    @media (max-width: 480px) {
-      .login-container {
-        padding: 20px;
-      }
-      
-      .welcome-message h1 {
-        font-size: 1.5rem;
-      }
-
-      .modal-content {
-        padding: 20px;
-      }
-    }
-
-    #refresh-data-btn {
-      margin-left: auto;
-    }
-
-    .sorted-classes-table th, .sorted-classes-table td {
-      text-align: left;
-    }
-
-    .sorted-classes-table th:nth-child(3), .sorted-classes-table td:nth-child(3) {
-      width: 80px;
-    }
-
-    .sorted-classes-table th:nth-child(4), .sorted-classes-table td:nth-child(4) {
-      width: 120px;
-    }
-
-    #sort-classes {
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background: var(--glass);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 8px 30px 8px 12px;
-      font-size: 0.85rem;
-      color: var(--text);
-      position: relative;
-      min-width: 150px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23e2e8f0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      background-size: 14px;
-      transition: var(--transition);
-    }
-
-    #sort-classes:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
-
-    .exam-expiry-notice {
-      color: var(--warning);
-      font-size: 0.8rem;
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* Dashboard Styles */
-    .dashboard-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-    }
-
-    .dashboard-modal.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .modal-content {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 30px;
-      max-width: 600px;
-      width: 90%;
-      max-height: 80vh;
-      overflow-y: auto;
-      backdrop-filter: blur(15px);
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-
-    .modal-header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .modal-header h2 {
-      font-size: 1.5rem;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 10px;
-    }
-
-    .modal-body {
-      margin-bottom: 25px;
-    }
-
-    .modal-body p {
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
-
-    .modal-footer {
-      text-align: center;
-    }
-
-    .modal-ok-btn {
-      padding: 12px 30px;
-      border-radius: 10px;
-      border: none;
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-    }
-
-    .modal-ok-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .stat-item {
-      background: var(--glass);
-      border: 1px solid var(--glass-border);
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 800;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .stat-label {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .alert-box {
-      background: rgba(239, 68, 68, 0.1);
-      border: 1px solid var(--danger);
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
-      color: var(--text);
-      position: relative;
-    }
-
-    .alert-box.warning {
-      background: rgba(245, 158, 11, 0.1);
-      border-color: var(--warning);
-    }
-
-    .alert-box i {
-      margin-right: 10px;
-    }
-
-    .name-input-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .name-input-form input {
-      padding: 14px;
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-      background: var(--glass);
-      color: var(--text);
-      outline: none;
-      font-size: 1rem;
-    }
-
-    .name-input-form button {
-      padding: 14px;
-      border-radius: 10px;
-      border: none;
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .progress-bar {
-      height: 10px;
-      background: var(--text-muted);
-      border-radius: 5px;
-      overflow: hidden;
-      margin-top: 10px;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      background: var(--gradient-primary);
-      transition: width 0.5s ease;
-    }
-
-    @media (max-width: 480px) {
-      .modal-content {
-        padding: 20px;
-      }
-
-      .modal-header h2 {
-        font-size: 1.5rem;
-      }
-    }
-
-    /* Additional styles that might be referenced in dashboard */
-    .notification {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      padding: 15px 22px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      box-shadow: var(--shadow-lg);
-      z-index: 1000;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.3s, transform 0.3s;
-      backdrop-filter: blur(15px);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      max-width: 350px;
-      font-size: 0.9rem;
-    }
-
-    .notification.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .notification.error {
-      border-left: 4px solid var(--danger);
-    }
-
-    .notification.success {
-      border-left: 4px solid var(--secondary);
-    }
-
-    .notification.warning {
-      border-left: 4px solid var(--warning);
-    }
-
-    /* New styles for updated dashboard */
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--text-muted);
-    }
-
-    .close-btn:hover {
-      color: var(--text);
-    }
-
-    .stats {
-      margin-bottom: 20px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-    }
-
-    .card {
-      background: var(--glass);
-      border: 1px solid var(--glass-border);
-      border-radius: 12px;
-      padding: 15px;
-      text-align: left;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .card p {
-      margin: 5px 0;
-      font-size: 0.9rem;
-    }
-
-    .badge-current {
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      margin-left: 10px;
-      font-weight: 600;
-    }
-
-    .badge-starter {
-      background: #6b7280;
-      color: white;
-    }
-
-    .badge-bronze {
-      background: #cd7f32;
-      color: white;
-    }
-
-    .badge-silver {
-      background: #c0c0c0;
-      color: white;
-    }
-
-    .badge-gold {
-      background: #ffd700;
-      color: black;
-    }
-
-    .badge-platinum {
-      background: #e5e4e2;
-      color: black;
-    }
-
-    .badges-dropdown {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .badges-dropdown select {
-      padding: 10px;
-      border-radius: 10px;
-      background: var(--glass);
-      color: var(--text);
-      border: 1px solid var(--card-border);
-    }
-
-    .alarms .alert-box {
-      margin-bottom: 10px;
-    }
-
-    .progress-section {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .progress-section p {
-      margin-top: 10px;
-    }
-
-    /* Notes Section Styles */
-    .notes-section {
-      margin-top: 20px;
-    }
-
-    .notes-section textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-      background: var(--glass);
-      color: var(--text);
-      outline: none;
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .notes-section button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      border-radius: 10px;
-      border: none;
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .notes-section ul {
-      list-style: none;
-      margin-top: 15px;
-    }
-
-    .notes-section li {
-      background: var(--glass);
-      border: 1px solid var(--glass-border);
-      border-radius: 8px;
-      padding: 10px;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .notes-section li button {
-      background: var(--danger);
-      padding: 5px 10px;
-      font-size: 0.8rem;
-    }
-
-    /* Dashboard Table Styles - Attractive and Colorful */
-    .stats-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      margin-top: 15px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      background: var(--card-bg);
-    }
-
-    .stats-table th,
-    .stats-table td {
-      padding: 12px 16px;
-      text-align: center;
-      border-bottom: 1px solid var(--card-border);
-      font-size: 0.9rem;
-    }
-
-    .stats-table th {
-      background: var(--gradient-primary);
-      color: white;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .stats-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .stats-table tr:hover {
-      background: rgba(255, 255, 255, 0.05);
-      cursor: pointer;
-    }
-
-    .stats-table .total {
-      color: #2563eb; /* Blue for total */
-      font-weight: 600;
-    }
-
-    .stats-table .done {
-      color: #10b981; /* Green for done */
-      font-weight: 600;
-    }
-
-    .stats-table .pending {
-      color: #ef4444; /* Red for pending */
-      font-weight: 600;
-    }
-
-    .stats h2 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      background: var(--gradient-secondary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    /* New Loading Overlay Styles */
-    #loading-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--darker);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      opacity: 1;
-      visibility: visible;
-      transition: opacity 0s, visibility 0s;
-    }
-
-    #loading-overlay.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .loading-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 40px;
-      text-align: center;
-      max-width: 500px;
-      width: 90%;
-      backdrop-filter: blur(15px);
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .loading-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-primary);
-    }
-
-    .loading-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-weight: 700;
-    }
-
-    .loading-message {
-      color: var(--text-muted);
-      margin-bottom: 25px;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .loading-spinner {
-      width: 60px;
-      height: 60px;
-      border: 4px solid rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      border-top-color: var(--primary);
-      margin: 0 auto 20px;
-      animation: spin 1.5s linear infinite;
-    }
-
-    .loading-progress {
-      width: 100%;
-      height: 8px;
-      background: var(--glass);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-top: 20px;
-    }
-
-    .loading-progress-bar {
-      height: 100%;
-      background: var(--gradient-primary);
-      width: 0%;
-      transition: width 0.5s ease;
-    }
-
-    .loading-dots {
-      display: inline-block;
-      margin-left: 5px;
-    }
-
-    .loading-dots::after {
-      content: '';
-      animation: dots 1.5s steps(4, end) infinite;
-    }
-
-    @keyframes dots {
-      0%, 20% { content: ''; }
-      40% { content: '.'; }
-      60% { content: '..'; }
-      80%, 100% { content: '...'; }
-    }
-
-  </style>
-  <style>
-:root{
---primary:#2563eb; --primary-dark:#1e40af; --secondary:#10b981; --accent:#8b5cf6; --danger:#ef4444;
---warning:#f59e0b; --dark:#0f172a; --darker:#0a0e1a; --light:#f1f5f9; --text:#e2e8f0;
---text-muted:#94a3b8; --card-bg:rgba(30,41,59,0.7); --card-border:rgba(255,255,255,0.08);
---glass:rgba(15,23,42,0.6); --glass-border:rgba(255,255,255,0.1);
---gradient-primary:linear-gradient(135deg,#2563eb 0%,#10b981 100%);
---gradient-secondary:linear-gradient(135deg,#8b5cf6 0%,#ec4899 100%);
---shadow-sm:0 4px 6px rgba(0,0,0,0.1); --shadow-md:0 10px 15px -3px rgba(0,0,0,0.2);
---shadow-lg:0 20px 25px -5px rgba(0,0,0,0.3); --radius:12px; --transition:all 0.3s ease;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html,body{background:var(--darker);color:var(--text);font-family:'Poppins','Tiro Bangla',system-ui,sans-serif;line-height:1.6;min-height:100vh;overflow-x:hidden;scrollbar-width:none;-ms-overflow-style:none;}
-body::-webkit-scrollbar{display:none;}
-.bangla-font{font-family:'Tiro Bangla','Poppins',serif;}
-.container{max-width:980px;margin:40px auto;padding:20px;}
-.action-buttons{display:flex;justify-content:center;gap:12px;margin-bottom:20px;}
-.form-button,.submissions-button,.comment-button,.reply-button,.admin-button{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;border:none;background:var(--gradient-primary);color:white;font-weight:600;font-size:0.85rem;cursor:pointer;transition:var(--transition);box-shadow:var(--shadow-sm);position:relative;overflow:hidden;}
-.form-button:hover,.submissions-button:hover,.comment-button:hover,.reply-button:hover,.admin-button:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
-.form-button::before,.submissions-button::before,.comment-button::before,.reply-button::before,.admin-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transition:0.5s;}
-.form-button:hover::before,.submissions-button:hover::before,.comment-button:hover::before,.reply-button:hover::before,.admin-button:hover::before{left:100%;}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);justify-content:center;align-items:center;z-index:1000;backdrop-filter:blur(5px);}
-.modal-content{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:25px;max-width:600px;width:90%;backdrop-filter:blur(12px);box-shadow:var(--shadow-lg);position:relative;overflow-y:auto;max-height:90vh;scroll-behavior:smooth;}
-.modal-content::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gradient-primary);}
-.modal-close{position:absolute;top:15px;right:15px;background:none;border:none;color:var(--text-muted);font-size:1.5rem;cursor:pointer;transition:var(--transition);}
-.modal-close:hover{color:var(--danger);}
-.modal-intro{margin-bottom:20px;text-align:center;}
-.modal-intro h2{font-size:1.4rem;background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px;}
-.modal-intro p{color:var(--text-muted);font-size:0.9rem;line-height:1.6;}
-.form-section{display:flex;flex-direction:column;gap:25px;}
-.form-section label{font-weight:bold;font-size:0.95rem;color:var(--text);text-align:left;}
-.form-section input,.form-section select,.form-section textarea{padding:12px 16px;border-radius:10px;border:1px solid var(--card-border);background:var(--glass);color:var(--text);outline:none;transition:var(--transition);backdrop-filter:blur(10px);font-size:0.9rem;}
-.form-section input:focus,.form-section select:focus,.form-section textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,0.2);}
-.form-section textarea{resize:vertical;min-height:120px;}
-.submit-button{width:100%;padding:12px;border-radius:10px;border:none;background:var(--gradient-primary);color:white;font-weight:600;font-size:0.95rem;cursor:pointer;transition:var(--transition);box-shadow:0 4px 10px rgba(37,99,235,0.3);display:flex;align-items:center;justify-content:center;gap:8px;}
-.submit-button:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(37,99,235,0.4);}
-.submit-button.loading .spinner{display:inline-block;}
-.submit-button.loading{animation: none !important;}
-.spinner{display:none;width:16px;height:16px;border:2px solid white;border-top:2px solid transparent;border-radius:50%;animation:spin 1s linear infinite;}
-@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-.success-message{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--secondary);color:white;padding:20px 40px;border-radius:10px;z-index:2000;font-size:1rem;box-shadow:var(--shadow-md);text-align:center;max-width:80%;}
-.notification{position:fixed;bottom:30px;right:30px;padding:15px 22px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;box-shadow:var(--shadow-lg);z-index:1000;opacity:0;transform:translateY(20px);transition:opacity 0.3s,transform 0.3s;backdrop-filter:blur(15px);display:flex;align-items:center;gap:10px;max-width:350px;font-size:0.9rem;}
-.notification.show{opacity:1;transform:translateY(0);}
-.notification.success{border-left:4px solid var(--secondary);}
-.notification.error{border-left:4px solid var(--danger);}
-.submissions-list,.reply-list,.sub-buttons{display:flex;flex-direction:column;gap:15px;max-height:60vh;overflow-y:auto;scroll-behavior:smooth;}
-.submission-item{background:var(--glass);border:1px solid var(--glass-border);border-radius:10px;padding:15px;box-shadow:var(--shadow-sm);transition:var(--transition);}
-.submission-item:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
-.submission-name{font-weight:600;font-size:1rem;color:var(--primary);}
-.submission-batch{font-size:0.85rem;color:var(--text-muted);}
-.submission-message{margin-top:10px;font-size:0.9rem;}
-.submission-reply{margin-top:10px;font-size:0.9rem;border-top:1px solid var(--card-border);padding-top:10px;color:var(--secondary);}
-.submission-time{font-size:0.75rem;color:var(--text-muted);margin-top:5px;text-align:right;}
-.reply-btn{padding:8px 16px;border-radius:8px;background:var(--gradient-secondary);color:white;border:none;cursor:pointer;margin-top:10px;transition:var(--transition);box-shadow:var(--shadow-sm);}
-.reply-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
-.warning-message{background:var(--warning);color:white;padding:15px;border-radius:10px;margin-bottom:20px;text-align:center;font-size:0.9rem;}
-@media(max-width:768px){.container{padding:15px;margin:20px;}.modal-content{padding:20px;max-height:90vh;}.action-buttons{flex-direction:column;gap:10px;}.form-button,.submissions-button,.comment-button,.reply-button,.admin-button{width:100%;justify-content:center;}}
-@media(max-width:480px){.modal-intro h2{font-size:1.2rem;}.form-section label,.form-section input,.form-section select,.form-section textarea,.submit-button{font-size:0.85rem;}.submission-item{padding:12px;}.submission-name,.submission-message{font-size:0.85rem;}.submission-batch,.submission-time{font-size:0.75rem;}}
-</style>
-  <style>
-.notice-bar {
-  overflow: hidden;
-  white-space: nowrap;
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--warning);
-  font-size: 0.8rem;
-  padding: 6px 0;
-  text-align: center;
-  border-bottom: 1px solid var(--card-border);
-  margin-top: 0;
-  position: relative;
-}
-
-.notice-bar span {
-  display: inline-block;
-  animation: marquee 40s linear infinite 0s;
-  padding-left: 100%; /* এটি গুরুত্বপূর্ণ - gap দূর করবে */
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-    }
-
-    /* Clock Styles - Attractive Digital Clock */
-    .clock-container {
-      text-align: center;
-      margin: 20px auto;
-      padding: 25px 20px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      box-shadow: var(--shadow-md);
-      backdrop-filter: blur(10px);
-      max-width: 300px; /* Fixed size for clock box */
-      width: 100%; /* Responsive but max 300px */
-    }
-
-    .clock-time {
-      font-size: 1.8rem;
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 5px;
-    }
-
-    .clock-time small {
-  font-size: 0.5em; /* PM/AM size reduced to 70% of parent */
-  vertical-align: middle; /* সারিবদ্ধ করা */
-    }
-
-    .clock-date {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    #exam-countdown {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .clock-container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--gradient-secondary);
-    }
-
-    /* New Search Results Styles */
-    #search-results {
-      margin: 10px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      max-height: 300px;
-      overflow-y: auto;
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: var(--shadow-sm);
-      display: none; /* Initially hidden */
-    }
-
-    .search-result-item {
-      padding: 8px 12px;
-      background: var(--glass);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: var(--transition);
-      font-size: 0.9rem;
-      color: var(--text);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .search-result-item:hover {
-      background: rgba(37, 99, 235, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .search-result-item .title {
-      flex: 1;
-    }
-
-    .search-result-item .subject {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডিজিটাল ডকুমেন্ট সলিউশন - ১০০+ সেবা</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --success: #10b981;
+            --danger: #ef4444;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: var(--dark);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            margin-top: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: var(--dark);
+        }
+
+        .tab-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: scaleY(0);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .service-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--danger);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg);
+            background: #dc2626;
+        }
+
+        .modal-header {
+            margin-bottom: 30px;
+        }
+
+        .modal-header h2 {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .modal-header p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* File Upload Area */
+        .upload-area {
+            border: 3px dashed var(--border);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--light);
+            margin-bottom: 30px;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary);
+            background: #eff6ff;
+        }
+
+        .upload-area.dragover {
+            border-color: var(--primary);
+            background: #dbeafe;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .upload-text {
+            font-size: 16px;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .upload-hint {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Controls */
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .control-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .control-group input,
+        .control-group select {
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .control-group input:focus,
+        .control-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Preview Area */
+        .preview-area {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-container {
+            max-width: 100%;
+            max-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .canvas-container {
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .category-tabs {
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+            .controls {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Color Picker */
+        .color-picker {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.selected {
+            border-color: var(--dark);
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: -100px;
+            right: 20px;
+            background: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 3000;
+            transition: bottom 0.3s;
+        }
+
+        .toast.show {
+            bottom: 20px;
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--success);
+        }
+
+        .toast.error {
+            border-left: 4px solid var(--danger);
+        }
+
+        /* Search */
+        .search-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #64748b;
+        }
+    </style>
 </head>
 <body>
-  <!-- Loading Overlay - New Addition -->
-  <div id="loading-overlay" class="hidden">
-    <div class="loading-box">
-      <div class="loading-spinner"></div>
-      <h2 class="loading-title bangla-font">ডাটা লোড হচ্ছে<span class="loading-dots"></span></h2>
-      <p class="loading-message bangla-font">দয়াকরে ডাটা লোড সম্পন্ন হওয়া পর্যন্ত অপেক্ষা করুন</p>
-      <div class="loading-progress">
-        <div class="loading-progress-bar" id="loading-progress-bar"></div>
-      </div>
-    </div>
-  </div>
-
-  <div id="login-page">
-    <div class="login-container">
-      <div class="welcome-message">
-        <h1 class="bangla-font">Dakhil-26 "Final Stage Preparation Course"</h1>
-        <p class="bangla-font">শিক্ষার যাত্রায় এক নতুন দিগন্ত। বাংলাদেশ অনলাইন মাদ্রাসা (BOM) এর প্রাইভেট ব্যাচের দাখিল-২৬ শিক্ষার্থীদের জন্য প্রিমিয়াম লার্নিং এক্সপেরিয়েন্স</p>
-      </div>
-      <div class="login-form">
-        <div class="form-group">
-          <label for="password" class="bangla-font">সিকিউরিটি কোড লিখুন</label>
-          <input type="password" id="password" placeholder="এখানে কোডটি লিখুন" class="bangla-font">
-        </div>
-        <button class="login-btn bangla-font" onclick="checkPassword()">লগইন করুন</button>
-        <div id="error-message" class="error-message bangla-font">সিকিউরিটি কোডটি ভুল হয়েছে। আবার চেষ্টা করুন।</div>
-      </div>
-      <div class="support-info">
-        <p class="bangla-font">এক্সেস পাসওয়ার্ড পেতে BOM এর এডমিনের সাথে যোগাযোগ করুন</p>
-        <a href="https://wa.me/8801806234120" class="whatsapp-link" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-          <span>WhatsApp</span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div id="main-page" style="display: none;">
+    <!-- Header -->
     <header>
-      <nav class="nav container">
-        <div class="brand">
-          <i class="fas fa-graduation-cap"></i>
-          <span>DAKHIL-26 <br>
-            <span class="tag">"Final Stage Preparation Course" (BOM)</span></span>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">📄</div>
+                <div class="logo-text">
+                    <h1>ডিজিটাল ডকুমেন্ট সলিউশন</h1>
+                    <p>১০০+ প্রফেশনাল সেবা এক জায়গায়</p>
+                </div>
+            </div>
         </div>
-        <div class="searchbar">
-          <i class="fas fa-search"></i>
-          <input id="search-subjects" type="search" placeholder="সার্চ করুন যা দরকার🔎" class="dynamic-placeholder">
-        </div>
-        <div id="search-results"></div>
-        <div class="controls">
-          <button class="btn" id="refresh-data-btn"><i class="fas fa-sync-alt"></i> <span class="bangla-font">ডেটা রিফ্রেশ</span></button>
-          <button class="btn" id="dashboard-btn" style="display: none;"><i class="fas fa-tachometer-alt"></i> <span class="bangla-font">ড্যাশবোর্ড</span></button>
-          <a class="btn" id="add-class-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfL0sFmx3IiTXCiFFraymOe65ITt6TqtTJVgjQln5dpAgk1oQ/viewform?usp=header" target="_blank" rel="noopener" style="display: none;"><i class="fas fa-plus-circle"></i> <span class="bangla-font">ক্লাস যুক্ত করুন</span></a>
-        </div>
-      </nav>
     </header>
-    <div class="notice-bar bangla-font"><span><b>👉 জিন্স সাজেশন 'ক্লাসের লেকচার শীট' ফোল্ডারে আপলোড করা হয়েছে।</b></span></div>
-    <div class="notice-bar bangla-font"><span><b>📢 বার্তা: প্রিয় শিক্ষার্থীরা, কমেন্টের রিপ্লাই সুবিধাটি বর্তমানে স্থগিত আছে। তবে আপনাদের প্রতিটি মতামত আমরা যত্নসহকারে পড়ছি এবং প্রয়োজনীয় পদক্ষেপ নিচ্ছি। আপনাদের মূল্যবান মতামত জানাতে থাকুন — আন্তরিক ধন্যবাদ সাথে থাকার জন্য!</b></span></div>
-    <main class="container">
-      <div class="hero fade-in">
-        <h1 class="bangla-font">Dakhil-26 "Final Stage Preparation Course"</h1>
-        <p class="bangla-font">শিক্ষার যাত্রায় এক নতুন দিগন্ত। বাংলাদেশ অনলাইন মাদ্রাসা (BOM) এর প্রাইভেট ব্যাচের দাখিল-২৬ শিক্ষার্থীদের জন্য প্রিমিয়াম লার্নিং এক্সপেরিয়েন্স</p>
-      </div>
-      <!-- Attractive Clock with Date -->
-      <div class="clock-container fade-in stat-card">
-        <div id="clock-time" class="clock-time"></div>
-        <div id="clock-date" class="clock-date"></div>
-        <div id="exam-countdown" class="stat-label bangla-font"></div>
-      </div>
-      <div class="stats">
-        <div class="stat-card fade-in">
-          <div class="stat-number">21</div>
-          <div class="stat-label bangla-font">সাবজেক্ট</div>
-        </div>
-        <div class="stat-card fade-in">
-          <div class="stat-number">120+</div>
-          <div class="stat-label bangla-font">ক্লাস</div>
-        </div>
-        <div class="stat-card fade-in" id="exam-stats">
-          <div class="stat-number">20+</div>
-          <div class="stat-label bangla-font">ইক্সাম</div>
-        </div>
-        <div class="stat-card fade-in" id="mission-stats">
-          <div class="stat-number">60+</div>
-          <div class="stat-label bangla-font">মিশন</div>
-        </div>
-      </div>
-      <div class="section-title">
-        <h2 class="bangla-font">আজকের ক্লাস</h2>
-        <select id="sort-classes" class="bangla-font">
-          <option value="today" selected>আজকের ক্লাস</option>
-          <option value="week">সপ্তাহের ক্লাস</option>
-          <option value="month">মাসের ক্লাস</option>
-        </select>
-      </div>
-      <div id="today-classes">
-        <table class="today-classes-table">
-          <thead>
-            <tr>
-              <th class="bangla-font">সাবজেক্ট</th>
-              <th class="bangla-font">শিরোনাম</th>
-              <th class="bangla-font">সময়</th>
-            </tr>
-          </thead>
-          <tbody id="today-classes-body">
-            <tr>
-              <td colspan="3" class="bangla-font" style="text-align: center; padding: 20px;">
-                <div class="loading"></div> লোড হচ্ছে...
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="section-title">
-        <h2 class="bangla-font">সব সাবজেক্ট</h2>
-      </div>
-      <div class="subj-list">
-        <a class="pill subject-link" href="#" data-name="কুরআন মাজীদ ও তাজভীদ"><span><i class="fas fa-book-quran"></i> <span class="bangla-font">কুরআন মাজীদ ও তাজভীদ</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="হাদিস শরীফ"><span><i class="fas fa-book"></i> <span class="bangla-font">হাদিস শরীফ</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="আরবি প্রথম পত্র"><span><i class="fas fa-language"></i> <span class="bangla-font">আরবি প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="আরবি দ্বিতীয় পত্র"><span><i class="fas fa-language"></i> <span class="bangla-font">আরবি দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="আকাইদ ও ফিকহ"><span><i class="fas fa-balance-scale"></i> <span class="bangla-font">আকাইদ ও ফিকহ</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="বাংলা প্রথম পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">বাংলা প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="বাংলা দ্বিতীয় পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">বাংলা দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="ইংরেজি প্রথম পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">ইংরেজি প্রথম পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="ইংরেজি দ্বিতীয় পত্র"><span><i class="fas fa-font"></i> <span class="bangla-font">ইংরেজি দ্বিতীয় পত্র</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="গণিত"><span><i class="fas fa-square-root-alt"></i> <span class="bangla-font">গণিত</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="ইসলামের ইতিহাস"><span><i class="fas fa-landmark"></i> <span class="bangla-font">ইসলামের ইতিহাস</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="তথ্য ও যোগাযোগ প্রযুক্তি"><span><i class="fas fa-laptop-code"></i> <span class="bangla-font">তথ্য ও যোগাযোগ প্রযুক্তি</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="পদার্থবিজ্ঞান"><span><i class="fas fa-atom"></i> <span class="bangla-font">পদার্থবিজ্ঞান</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="রসায়ন"><span><i class="fas fa-flask"></i> <span class="bangla-font">রসায়ন</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="উচ্চতর গণিত"><span><i class="fas fa-calculator"></i> <span class="bangla-font">উচ্চতর গণিত</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="জীববিজ্ঞান"><span><i class="fas fa-dna"></i> <span class="bangla-font">জীববিজ্ঞান</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="বাংলাদেশ ও বিশ্বপরিচয়"><span><i class="fas fa-globe-asia"></i> <span class="bangla-font">বাংলাদেশ ও বিশ্বপরিচয়</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="কৃষি শিক্ষা"><span><i class="fas fa-seedling"></i> <span class="bangla-font">কৃষি শিক্ষা</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="মানতিক"><span><i class="fas fa-brain"></i> <span class="bangla-font">মানতিক</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="গার্হস্থ্য বিজ্ঞান"><span><i class="fas fa-home"></i> <span class="bangla-font">গার্হস্থ্য বিজ্ঞান</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="পৌরনীতি ও নাগরিকতা"><span><i class="fas fa-landmark"></i> <span class="bangla-font">পৌরনীতি ও নাগরিকতা</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="মিশন"><span><i class="fas fa-bullseye"></i> <span class="bangla-font">মিশন</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="ইক্সাম"><span><i class="fas fa-file-alt"></i> <span class="bangla-font">ইক্সাম</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="ক্লাসের লেকচার শীট"><span><i class="fas fa-file-pdf"></i> <span class="bangla-font">ক্লাসের লেকচার শীট</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="পরীক্ষার রেজাল্ট শীট"><span><i class="fas fa-chart-bar"></i> <span class="bangla-font">পরীক্ষার রেজাল্ট শীট</span></span><span class="go bangla-font">খুলুন</span></a>
-        <a class="pill subject-link" href="#" data-name="অন্যান্য"><span><i class="fas fa-ellipsis-h"></i> <span class="bangla-font">অন্যান্য</span></span><span class="go bangla-font">খুলুন</span></a>
-      </div>
-    </main>
+
+    <!-- Main Container -->
     <div class="container">
-      <div class="action-buttons">
-        <button class="form-button" id="form-button"><i class="fas fa-comment"></i> <span class="bangla-font">কমেন্ট করুন</span></button>
-        <button class="submissions-button" id="submissions-button"><i class="fas fa-list"></i> <span class="bangla-font">সাবমিশন দেখুন</span></button>
-      </div>
-    </div>
-    <div class="owner-wrap">
-      <div class="owner-messages" aria-hidden="false">
-        <span class="msg">crafted with care</span>
-        <span class="msg">trusted mentor</span>
-        <span class="msg">leading the roadmap</span>
-        <span class="msg">for topper success</span>
-      </div>
-      <div class="owner-name bangla-font">MD. RIAD HASAN<span style="font-weight:600; font-size:0.86rem; color:rgba(226,232,240,0.85); margin-left:8px;">(CEO & Founder)</span></div>
-      <div class="owner-sub">building brighter paths for ambitious learners</div>
-      <div class="designer-credit">
-        <span class="bangla-font" style="opacity:0.9;">design by</span>
-        <span class="designer-name">SAHIBUL MUSA SIUM</span>
-      </div>
-    </div>
-    <footer class="site-footer">
-      © 2025 Dakhil-26 "Final Stage Preparation Course" (BOM). All rights reserved.
-    </footer>
-  </div>
-  <div id="subject-page" style="display: none;">
-    <header>
-      <nav class="nav container">
-        <button class="brand back-button"><i class="fas fa-arrow-left"></i> <span class="bangla-font">সব সাবজেক্ট</span></button>
-        <div class="filter-bar">
-          <input id="search" type="search" placeholder="🔍 সার্চ...">
-          <select id="sort">
-            <option value="desc" class="bangla-font">নতুন থেকে পুরানো</option>
-            <option value="asc" class="bangla-font">পুরানো থেকে নতুন</option>
-          </select>
+        <div class="main-content">
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">প্রফেশনাল সেবা</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">সেবা উপলব্ধ</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">নিরাপত্তা নিশ্চিত</div>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="আপনার প্রয়োজনীয় সেবা খুঁজুন...">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="tab-btn active" onclick="filterCategory('all')">সকল সেবা</button>
+                <button class="tab-btn" onclick="filterCategory('photo')">📷 ছবি প্রসেসিং</button>
+                <button class="tab-btn" onclick="filterCategory('form')">📝 ফর্ম ফিলআপ</button>
+                <button class="tab-btn" onclick="filterCategory('pdf')">📄 PDF কাজ</button>
+                <button class="tab-btn" onclick="filterCategory('education')">🎓 শিক্ষা</button>
+                <button class="tab-btn" onclick="filterCategory('job')">💼 চাকরি</button>
+                <button class="tab-btn" onclick="filterCategory('bank')">💳 ব্যাংকিং</button>
+                <button class="tab-btn" onclick="filterCategory('land')">🏠 জমি/আইন</button>
+                <button class="tab-btn" onclick="filterCategory('visa')">🛂 পাসপোর্ট/ভিসা</button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid" id="servicesGrid"></div>
         </div>
-      </nav>
-    </header>
-    <main class="container">
-      <h2 id="subject-title" class="bangla-font"><i class="fas fa-book"></i> সাবজেক্ট</h2>
-      <div id="classGrid" class="grid"></div>
-    </main>
-    <div class="owner-wrap">
-      <div class="owner-messages" aria-hidden="false">
-        <span class="msg">crafted with care</span>
-        <span class="msg">trusted mentor</span>
-        <span class="msg">leading the roadmap</span>
-        <span class="msg">for topper success</span>
-      </div>
-      <div class="owner-name bangla-font">MD. RIAD HASAN<span style="font-weight:600; font-size:0.86rem; color:rgba(226,232,240,0.85); margin-left:8px;">(CEO & Founder)</span></div>
-      <div class="owner-sub">building brighter paths for ambitious learners</div>
-      <div class="designer-credit">
-        <span class="bangla-font" style="opacity:0.9;">design by</span>
-        <span class="designer-name">SAHIBUL MUSA SIUM</span>
-      </div>
     </div>
-    <footer class="site-footer">
-      © 2025 Dakhil-26 "Final Stage Preparation Course" (BOM). All rights reserved.
-    </footer>
-  </div>
-  <div id="warning-modal" class="warning-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="bangla-font">লগইন সফল হয়েছে!</h2>
-      </div>
-      <div class="modal-body">
-        <p class="bangla-font">অনুগ্রহ করে নোট করুন: <br>BOM এর ওয়েবসাইটের এক্সেস তথ্য সর্বদা গোপনীয় রাখুন এবং কারোর সাথে পাসওয়ার্ড শেয়ার করবেন না।</p>
-        <p class="bangla-font">যদি কোনো ব্যবহারকারীর পাসওয়ার্ড শেয়ার করতে দেখা যায়, তাহলে তাকে এই ওয়েবসাইট থেকে স্থায়ীভাবে নিষিদ্ধ করা হবে।</p>
-      </div>
-      <div class="modal-footer">
-        <button class="modal-ok-btn bangla-font" onclick="closeWarningModal()">ঠিক আছে</button>
-      </div>
+
+    <!-- Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">✕</button>
+            
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </div>
+
+            <!-- Upload Area -->
+            <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+                <div class="upload-icon">📤</div>
+                <div class="upload-text">ফাইল আপলোড করুন</div>
+                <div class="upload-hint">ছবি, PDF বা ডকুমেন্ট ড্র্যাগ করুন অথবা ক্লিক করুন</div>
+                <input type="file" id="fileInput" accept="image/*,.pdf" multiple>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls" id="controlsArea"></div>
+
+            <!-- Preview -->
+            <div class="preview-area" id="previewArea">
+                <div class="preview-container" id="previewContainer">
+                    <p style="color: #64748b;">প্রিভিউ এখানে দেখাবে</p>
+                </div>
+            </div>
+
+            <!-- Loading -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>প্রসেস হচ্ছে...</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button class="btn btn-primary" id="processBtn" onclick="processFile()">
+                    ⚙️ প্রসেস করুন
+                </button>
+                <button class="btn btn-success" id="downloadBtn" onclick="downloadFile()" style="display: none;">
+                    💾 ডাউনলোড করুন
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
-  <div id="loading-modal" class="warning-modal" style="display: none;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="bangla-font">ডাটা লোড হচ্ছে...</h2>
-      </div>
-      <div class="modal-body">
-        <p class="bangla-font">দয়াকরে ডাটা লোড সম্পন্ন হওয়া পর্যন্ত অপেক্ষা করুন</p>
-        <div class="loading"></div>
-      </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span id="toastIcon"></span>
+        <span id="toastMessage"></span>
     </div>
-  </div>
-  <div id="notification" class="notification"></div>
-  <!-- Dashboard Modal -->
-  <div id="dashboard-modal" class="dashboard-modal">
-    <div class="modal-content">
-      <div class="modal-body" id="dashboard-body">
-        <!-- ডাইনামিক কনটেন্ট এখানে লোড হবে -->
-      </div>
-    </div>
-  </div>
-  <!-- Name Set Modal -->
-<div class="modal" id="nameModal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="hideNameModal()">×</button>
-    <div class="modal-intro">
-      <h2 class="bangla-font">নাম সেট করুন</h2>
-      <p class="bangla-font">আপনার নাম লিখুন। এটি সেভ হয়ে যাবে এবং পরবর্তীতে কমেন্ট ও রিপ্লাই দেখার জন্য ব্যবহৃত হবে।</p>
-      <div class="warning-message bangla-font">
-        দয়া করে আপনার পূর্ণ নাম ব্যবহার করুন, যাতে অন্য কারো সাথে নামের কোনো মিল না হয়। একটি স্বতন্ত্র এবং ব্যতিক্রমী নাম নির্বাচন করুন, যেন আপনার মতামত এবং উত্তর সঠিকভাবে সনাক্ত করা যায়।
-      </div>
-    </div>
-    <div class="form-section">
-      <form id="nameForm" onsubmit="saveName(event)">
-        <label class="bangla-font" for="userName">নাম</label>
-        <input type="text" id="userName" placeholder="আপনার পূর্ণ নাম লিখুন" required class="bangla-font">
-        <button type="submit" class="submit-button bangla-font">সেভ করুন</button>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- Form Modal -->
-<div class="modal" id="formModal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="hideForm()">×</button>
-    <div class="modal-intro">
-      <h2 class="bangla-font">আপনার মতামত আমাদের কাছে মূল্যবান</h2>
-      <p class="bangla-font">প্রিয় শিক্ষার্থী, আমাদের শিক্ষামূলক ওয়েবসাইট আপনাদের শিক্ষা ও জ্ঞানার্জনের পথকে আরও সহজ ও ফলপ্রসূ করতে প্রতিশ্রুতিবদ্ধ। নিচের ফর্মটি পূরণ করুন।</p>
-    </div>
-    <div class="form-section">
-      <form id="myForm" onsubmit="submitForm(event)">
-        <label class="bangla-font" for="name">নাম</label>
-        <input type="text" name="name" id="name" placeholder="আপনার নাম" required class="bangla-font" readonly><br>
-        <label class="bangla-font" for="batch">ব্যাচ নাম</label>
-        <select name="batch" id="batch" required class="bangla-font">
-          <option value="" disabled selected class="bangla-font">ব্যাচ নির্বাচন করুন</option>
-          <option value="Dakhil-26" class="bangla-font">দাখিল-২৬</option>
-          </select><br>
-        <label class="bangla-font" for="message">মতামত/পরামর্শ/অভিযোগ</label>
-        <textarea name="message" id="message" placeholder="আপনার মতামত লিখুন" required class="bangla-font"></textarea>
-        <button type="submit" class="submit-button bangla-font" id="submitBtn">জমা দিন <span class="spinner"></span></button>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- Submissions Modal -->
-<div class="modal" id="submissionsModal">
-  <div class="modal-content">
-    <button class="modal-close" onclick="hideSubmissions()">×</button>
-    <div class="modal-intro">
-      <h2 class="bangla-font">সাবমিশন তালিকা</h2>
-      <p class="bangla-font">এখানে সকল সাবমিশন দেখুন।</p>
-    </div>
-    <div id="submissions-list" class="submissions-list"></div>
-  </div>
-</div>
-<div class="success-message" id="successMessage">ফর্ম সফলভাবে জমা হয়েছে!</div>
-<div id="notification" class="notification"></div>
-  <script>
-    const API_URL = "https://script.google.com/macros/s/AKfycbwmnSsAIbqPFKDDIVPsG4GpsLqb7JRnaKhmtvAKzxCBnP-Wia-GxZLnqVILuMfixENj/exec";
 
-function $(sel, root = document) { return root.querySelector(sel); }
-function $all(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
+    <script>
+        // Services Data
+        const services = [
+            // Photo Processing (1-15)
+            { id: 1, category: 'photo', title: 'পাসপোর্ট সাইজ ছবি তৈরি', icon: '📷', type: 'passport' },
+            { id: 2, category: 'photo', title: 'ভিসার ছবি তৈরি', icon: '🛂', type: 'visa-photo' },
+            { id: 3, category: 'photo', title: 'সিগনেচার কাটিং ও ব্যাকগ্রাউন্ড রিমুভ', icon: '✍️', type: 'signature' },
+            { id: 4, category: 'photo', title: 'ব্যাকগ্রাউন্ড রঙ পরিবর্তন', icon: '🎨', type: 'bg-color' },
+            { id: 5, category: 'photo', title: 'ছবি পরিষ্কার/হোয়াইট ব্যালান্স', icon: '✨', type: 'enhance' },
+            { id: 6, category: 'photo', title: 'ফটো DPI ঠিক করা (300/360 DPI)', icon: '📐', type: 'dpi' },
+            { id: 7, category: 'photo', title: 'ফটো সাইজ কমপ্রেস (100KB/50KB)', icon: '🗜️', type: 'compress' },
+            { id: 8, category: 'photo', title: 'A4 শিটে একাধিক কপি', icon: '📄', type: 'multiple' },
+            { id: 9, category: 'photo', title: 'NID ছবির ক্রপ ও ফরম্যাট', icon: '🆔', type: 'nid-photo' },
+            { id: 10, category: 'photo', title: 'জন্মনিবন্ধন ফর্মে ছবি সেট', icon: '👶', type: 'birth-photo' },
+            { id: 11, category: 'photo', title: 'ব্যাংক ফর্মে ছবি + সিগনেচার', icon: '🏦', type: 'bank-photo' },
+            { id: 12, category: 'photo', title: 'এক্সপ্রেস ফটো কপি (AI Enhance)', icon: '🚀', type: 'express' },
+            { id: 13, category: 'photo', title: 'সিভির ছবি রাউন্ড কর্নার', icon: '📝', type: 'cv-photo' },
+            { id: 14, category: 'photo', title: '৩.৫×৪.৫ ছবি বানানো', icon: '📏', type: 'custom-size' },
+            { id: 15, category: 'photo', title: 'অনলাইন ফর্ম আপলোড ছবি', icon: '☁️', type: 'online-photo' },
 
-let currentSubject = null;
-let highlightedClassTimestamp = null;
-const loginPage = $('#login-page');
-const mainPage = $('#main-page');
-const subjectPage = $('#subject-page');
-const warningModal = $('#warning-modal');
-const loadingModal = $('#loading-modal');
-const loadingOverlay = $('#loading-overlay'); // New loading overlay
-let allClasses = [];
-let groupedClassesCache = {};
-let mainScrollPosition = 0; // New: To save main page scroll position
+            // Form Fill-up (16-30)
+            { id: 16, category: 'form', title: 'পাসপোর্ট ফর্মে ছবি ও সিগনেচার', icon: '🛂', type: 'passport-form' },
+            { id: 17, category: 'form', title: 'জন্মনিবন্ধন আবেদন ফর্ম', icon: '📋', type: 'birth-form' },
+            { id: 18, category: 'form', title: 'SSC/HSC Registration ফর্ম', icon: '🎓', type: 'ssc-form' },
+            { id: 19, category: 'form', title: 'পুলিশ ক্লিয়ারেন্স ফর্ম', icon: '👮', type: 'police-form' },
+            { id: 20, category: 'form', title: 'ইউনিয়ন পরিষদের ফর্ম', icon: '🏛️', type: 'union-form' },
+            { id: 21, category: 'form', title: 'নাগরিক সনদ ফর্ম', icon: '📜', type: 'citizen-form' },
+            { id: 22, category: 'form', title: 'ভূমি অফিসের আবেদনপত্র', icon: '🏞️', type: 'land-form' },
+            { id: 23, category: 'form', title: 'ট্রেড লাইসেন্স ফর্ম', icon: '🏪', type: 'trade-form' },
+            { id: 24, category: 'form', title: 'গ্যাস/বিদ্যুৎ সংযোগ ফর্ম', icon: '⚡', type: 'utility-form' },
+            { id: 25, category: 'form', title: 'TIN রেজিস্ট্রেশন PDF', icon: '💼', type: 'tin-form' },
+            { id: 26, category: 'form', title: 'NID Smart Card Correction', icon: '🆔', type: 'nid-form' },
+            { id: 27, category: 'form', title: 'ভোটার তথ্য সংশোধন', icon: '🗳️', type: 'voter-form' },
+            { id: 28, category: 'form', title: 'পেনশন/ভাতা ফর্ম', icon: '👴', type: 'pension-form' },
+            { id: 29, category: 'form', title: 'স্কুল ভর্তি ফর্ম', icon: '🏫', type: 'school-form' },
+            { id: 30, category: 'form', title: 'চাকরির আবেদন ফর্ম', icon: '💼', type: 'job-form' },
 
-const availableSubjects = [
-  "কুরআন মাজীদ ও তাজভীদ", "হাদিস শরীফ", "আরবি প্রথম পত্র", "আরবি দ্বিতীয় পত্র",
-  "আকাইদ ও ফিকহ", "বাংলা প্রথম পত্র", "বাংলা দ্বিতীয় পত্র", "ইংরেজি প্রথম পত্র",
-  "ইংরেজি দ্বিতীয় পত্র", "গণিত", "ইসলামের ইতিহাস", "তথ্য ও যোগাযোগ প্রযুক্তি",
-  "পদার্থবিজ্ঞান", "রসায়ন", "উচ্চতর গণিত", "জীববিজ্ঞান",
-  "বাংলাদেশ ও বিশ্বপরিচয়", "কৃষি শিক্ষা",
-  "মানতিক", "গার্হস্থ্য বিজ্ঞান", "পৌরনীতি ও নাগরিকতা", "মিশন",
-  "ইক্সাম", "ক্লাসের লেকচার শীট", "পরীক্ষার রেজাল্ট শীট", "অন্যান্য"
-];
+            // PDF Processing (31-45)
+            { id: 31, category: 'pdf', title: 'PDF Merge করা', icon: '🔗', type: 'pdf-merge' },
+            { id: 32, category: 'pdf', title: 'PDF Split করা', icon: '✂️', type: 'pdf-split' },
+            { id: 33, category: 'pdf', title: 'PDF থেকে JPG', icon: '🖼️', type: 'pdf-to-jpg' },
+            { id: 34, category: 'pdf', title: 'JPG থেকে PDF', icon: '📄', type: 'jpg-to-pdf' },
+            { id: 35, category: 'pdf', title: 'PDF কমপ্রেস (200KB)', icon: '🗜️', type: 'pdf-compress' },
+            { id: 36, category: 'pdf', title: 'A4 মার্জিন সেটিং', icon: '📏', type: 'pdf-margin' },
+            { id: 37, category: 'pdf', title: 'PDF Header/Footer', icon: '📑', type: 'pdf-header' },
+            { id: 38, category: 'pdf', title: 'সার্টিফিকেট স্ক্যান HD', icon: '🎓', type: 'scan-hd' },
+            { id: 39, category: 'pdf', title: 'ডকুমেন্ট Noise Remove', icon: '🧹', type: 'noise-remove' },
+            { id: 40, category: 'pdf', title: 'বাংলা ফন্টে PDF এডিট', icon: '✏️', type: 'bangla-pdf' },
+            { id: 41, category: 'pdf', title: 'Signature PDF Overlay', icon: '✍️', type: 'sig-overlay' },
+            { id: 42, category: 'pdf', title: 'Company Seal বসানো', icon: '🏢', type: 'seal-overlay' },
+            { id: 43, category: 'pdf', title: 'e-Tender ডকুমেন্ট', icon: '📊', type: 'tender' },
+            { id: 44, category: 'pdf', title: 'Digital Stamp Overlay', icon: '🔖', type: 'stamp' },
+            { id: 45, category: 'pdf', title: 'PDF Password Remove', icon: '🔓', type: 'pdf-unlock' },
 
-const LOGIN_EXPIRY_KEY = 'dakhil26_login_expiry';
-const IS_LOGGED_IN_KEY = 'dakhil26_is_logged_in';
-const USER_ROLE_KEY = 'dakhil26_user_role';
+            // Education (46-57)
+            { id: 46, category: 'education', title: 'SSC/HSC Admit Card Print', icon: '🎫',
+```html
+type: 'admit-card' },
+            { id: 47, category: 'education', title: 'মার্কশীট পরিষ্কার ভার্সন', icon: '📊', type: 'marksheet' },
+            { id: 48, category: 'education', title: 'সার্টিফিকেট HD স্ক্যান', icon: '📜', type: 'certificate' },
+            { id: 49, category: 'education', title: 'টিউশনির CV তৈরি', icon: '👨‍🏫', type: 'tuition-cv' },
+            { id: 50, category: 'education', title: 'Madrasa Board ফর্ম', icon: '🕌', type: 'madrasa-form' },
+            { id: 51, category: 'education', title: 'কোটার আবেদন ফর্ম', icon: '📝', type: 'quota-form' },
+            { id: 52, category: 'education', title: 'বিশ্ববিদ্যালয় ভর্তি ফর্ম', icon: '🎓', type: 'uni-form' },
+            { id: 53, category: 'education', title: 'Assignment PDF তৈরি', icon: '📚', type: 'assignment' },
+            { id: 54, category: 'education', title: 'প্রিন্ট রেডি নোট/MCQ', icon: '📄', type: 'notes' },
+            { id: 55, category: 'education', title: 'সেমিস্টার ফর্ম Fill-up', icon: '📋', type: 'semester' },
+            { id: 56, category: 'education', title: 'হোসটেল ফর্ম ছবি সেট', icon: '🏢', type: 'hostel' },
+            { id: 57, category: 'education', title: 'Portable ID Card', icon: '🆔', type: 'student-id' },
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+            // Job (58-69)
+            { id: 58, category: 'job', title: 'CV Photo Resize', icon: '📷', type: 'cv-resize' },
+            { id: 59, category: 'job', title: 'Cover Letter Edit', icon: '✉️', type: 'cover-letter' },
+            { id: 60, category: 'job', title: 'Job Form Fillup', icon: '📝', type: 'job-fillup' },
+            { id: 61, category: 'job', title: 'NID + Photo + Signature সেট', icon: '🆔', type: 'nid-set' },
+            { id: 62, category: 'job', title: 'Bank Job e-Application', icon: '🏦', type: 'bank-job' },
+            { id: 63, category: 'job', title: 'Joining ফর্ম Photo Insert', icon: '🏢', type: 'joining' },
+            { id: 64, category: 'job', title: 'Salary Certificate PDF', icon: '💰', type: 'salary-cert' },
+            { id: 65, category: 'job', title: 'Experience Letter PDF', icon: '📄', type: 'experience' },
+            { id: 66, category: 'job', title: 'Official Notice Letter', icon: '📢', type: 'notice' },
+            { id: 67, category: 'job', title: 'Company Pad তৈরি', icon: '🏢', type: 'letterhead' },
+            { id: 68, category: 'job', title: 'ID Badge Print-ready', icon: '🆔', type: 'id-badge' },
+            { id: 69, category: 'job', title: 'QR সহ আইডি কার্ড', icon: '📱', type: 'qr-id' },
 
-function setLoginExpiry(role) {
-  const now = new Date();
-  const oneMonthFromNow = new Date(now.setMonth(now.getMonth() + 1));
-  localStorage.setItem(LOGIN_EXPIRY_KEY, oneMonthFromNow.getTime());
-  localStorage.setItem(IS_LOGGED_IN_KEY, 'true');
-  localStorage.setItem(USER_ROLE_KEY, role);
-}
+            // Banking (70-75)
+            { id: 70, category: 'bank', title: 'Mobile Banking KYC', icon: '📱', type: 'kyc' },
+            { id: 71, category: 'bank', title: 'Nagad/BKash Agent ফর্ম', icon: '💳', type: 'agent-form' },
+            { id: 72, category: 'bank', title: 'Bank Account Opening', icon: '🏦', type: 'account' },
+            { id: 73, category: 'bank', title: 'Cheque Scan HD', icon: '💵', type: 'cheque' },
+            { id: 74, category: 'bank', title: 'TIN Certificate PDF', icon: '📜', type: 'tin-cert' },
+            { id: 75, category: 'bank', title: 'Utility Bill Scan', icon: '🧾', type: 'bill' },
 
-function checkLoginExpiry() {
-  const expiryTime = localStorage.getItem(LOGIN_EXPIRY_KEY);
-  const isLoggedIn = localStorage.getItem(IS_LOGGED_IN_KEY);
-  
-  if (!expiryTime || !isLoggedIn || isLoggedIn !== 'true') {
-    return false;
-  }
-  
-  const now = new Date().getTime();
-  return now < parseInt(expiryTime);
-}
+            // Land/Legal (76-82)
+            { id: 76, category: 'land', title: 'Namjari আবেদন', icon: '📋', type: 'namjari' },
+            { id: 77, category: 'land', title: 'খতিয়ান HD স্ক্যান', icon: '📄', type: 'khatian' },
+            { id: 78, category: 'land', title: 'Mouza Map Extract', icon: '🗺️', type: 'mouza' },
+            { id: 79, category: 'land', title: 'DCR/Mutation PDF', icon: '📑', type: 'mutation' },
+            { id: 80, category: 'land', title: 'স্ট্যাম্প পেপার স্ক্যান', icon: '🔖', type: 'stamp-paper' },
+            { id: 81, category: 'land', title: 'Affidavit Document', icon: '⚖️', type: 'affidavit' },
+            { id: 82, category: 'land', title: 'MOU / Agreement', icon: '📝', type: 'agreement' },
 
-function getUserRole() {
-  return localStorage.getItem(USER_ROLE_KEY) || 'user';
-}
+            // Online Platform (83-89)
+            { id: 83, category: 'online', title: 'Surokkha App ছবি', icon: '💉', type: 'surokkha' },
+            { id: 84, category: 'online', title: 'Smart NID Upload', icon: '🆔', type: 'smart-nid' },
+            { id: 85, category: 'online', title: 'Birth Certificate Convert', icon: '👶', type: 'birth-convert' },
+            { id: 86, category: 'online', title: 'Bangladesh Bank Format', icon: '🏦', type: 'bb-format' },
+            { id: 87, category: 'online', title: 'Bdjobs প্রোফাইল ছবি', icon: '💼', type: 'bdjobs' },
+            { id: 88, category: 'online', title: 'BRTA Driving License', icon: '🚗', type: 'brta' },
+            { id: 89, category: 'online', title: 'IRCC Canada Visa', icon: '🇨🇦', type: 'canada' },
 
-function logout() {
-  localStorage.removeItem(LOGIN_EXPIRY_KEY);
-  localStorage.removeItem(IS_LOGGED_IN_KEY);
-  localStorage.removeItem(USER_ROLE_KEY);
-  loginPage.style.display = 'flex';
-  mainPage.style.display = 'none';
-  subjectPage.style.display = 'none';
-}
+            // Passport/Visa (90-96)
+            { id: 90, category: 'visa', title: 'E-passport Photo Format', icon: '🛂', type: 'e-passport' },
+            { id: 91, category: 'visa', title: 'Indian Visa Photo', icon: '🇮🇳', type: 'indian-visa' },
+            { id: 92, category: 'visa', title: 'Saudi Visa Photo', icon: '🇸🇦', type: 'saudi-visa' },
+            { id: 93, category: 'visa', title: 'Student Visa Photo', icon: '🎓', type: 'student-visa' },
+            { id: 94, category: 'visa', title: 'UK Visa Document', icon: '🇬🇧', type: 'uk-visa' },
+            { id: 95, category: 'visa', title: 'MRV Fee Slip', icon: '💵', type: 'mrv' },
+            { id: 96, category: 'visa', title: 'Medical Report Format', icon: '🏥', type: 'medical' },
 
-function showWarningModal() {
-  warningModal.classList.add('show');
-}
+            // Identity (97-100)
+            { id: 97, category: 'identity', title: 'eSignature তৈরি', icon: '✍️', type: 'e-signature' },
+            { id: 98, category: 'identity', title: 'Digital Seal / QR', icon: '🔐', type: 'seal-qr' },
+            { id: 99, category: 'identity', title: 'Photo ID Badge', icon: '🆔', type: 'photo-id' },
+            { id: 100, category: 'identity', title: 'KYC Verification File', icon: '✅', type: 'kyc-file' }
+        ];
 
-function closeWarningModal() {
-  warningModal.classList.remove('show');
-}
+        let currentService = null;
+        let uploadedFiles = [];
+        let processedResult = null;
 
-// New loading overlay functions
-function showLoadingOverlay() {
-  loadingOverlay.classList.remove('hidden');
-}
+        // Initialize
+        window.onload = function() {
+            renderServices(services);
+            setupEventListeners();
+        };
 
-function hideLoadingOverlay() {
-  loadingOverlay.classList.add('hidden');
-}
-
-function updateLoadingProgress(progress) {
-  const progressBar = $('#loading-progress-bar');
-  if (progressBar) {
-    progressBar.style.width = `${progress}%`;
-  }
-}
-
-function showLoadingModal() {
-  loadingModal.style.display = 'flex';
-}
-
-function hideLoadingModal() {
-  loadingModal.style.display = 'none';
-}
-
-function showNotification(message, isError = false, isWarning = false) {
-  const notification = $('#notification');
-  notification.innerHTML = "<i class=\"" + (isError ? 'fas fa-exclamation-circle' : isWarning ? 'fas fa-exclamation-triangle' : 'fas fa-check-circle') + "\"></i> " + message;
-  notification.className = 'notification ' + (isError ? 'error' : isWarning ? 'warning' : 'success');
-  notification.classList.add('show');
-
-  setTimeout(() => {
-    notification.classList.remove('show');
-  }, 3000);
-}
-
-function checkPassword() {
-  const password = $('#password').value.trim();
-  const errorElement = $('#error-message');
-  
-  if (password === 'USERDAKHIL26') {
-    setLoginExpiry('user');
-    loginPage.style.display = 'none';
-    mainPage.style.display = 'block';
-    showWarningModal();
-    showLoadingOverlay(); // Show loading overlay
-    loadInitialData();
-    showDashboardButton();
-    scrollToTop();
-  } else if (password === 'OWNERDAKHIL26') {
-    setLoginExpiry('owner');
-    loginPage.style.display = 'none';
-    mainPage.style.display = 'block';
-    showWarningModal();
-    showLoadingOverlay(); // Show loading overlay
-    loadInitialData();
-    scrollToTop();
-  } else if (password === 'EDITOR@BOM-435') {
-    setLoginExpiry('editor');
-    loginPage.style.display = 'none';
-    mainPage.style.display = 'block';
-    showWarningModal();
-    showLoadingOverlay(); // Show loading overlay
-    loadInitialData();
-    scrollToTop();
-  } else {
-    errorElement.style.display = 'block';
-    setTimeout(() => {
-      errorElement.style.display = 'none';
-    }, 3000);
-  }
-}
-
-function showDashboardButton() {
-  const dashboardBtn = $('#dashboard-btn');
-  const role = getUserRole();
-  if (role === 'user' || role === 'editor') {
-    dashboardBtn.style.display = 'inline-flex';
-  }
-}
-
-function showAddClassButton() {
-  const addClassBtn = $('#add-class-btn');
-  if (addClassBtn && (getUserRole() === 'owner' || getUserRole() === 'editor')) {
-    addClassBtn.style.display = 'inline-flex';
-  }
-}
-
-$('#password').addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') {
-    checkPassword();
-  }
-});
-
-function getDateFromTimestamp(timestamp) {
-  if (!timestamp) return getTodayDate();
-
-  try {
-    const date = new Date(timestamp);
-    if (!isNaN(date)) {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const day = String(date.getDate()).padStart(2, '0');
-      return `${day}-${month}-${year}`; // ফরম্যাট: DD-MM-YYYY
-    }
-    return getTodayDate();
-  } catch (error) {
-    console.error("Timestamp parsing error:", error, timestamp);
-    return getTodayDate();
-  }
-}
-
-function getTimeFromTimestamp(timestamp) {
-  if (!timestamp) return '12:00 AM';
-
-  try {
-    const date = new Date(timestamp);
-    if (!isNaN(date)) {
-      return date.toLocaleTimeString('en-US', { 
-        timeZone: 'Asia/Dhaka', 
-        hour: 'numeric', 
-        minute: '2-digit', 
-        hour12: true 
-      });
-    }
-    return '12:00 AM';
-  } catch (error) {
-    console.error("Time parsing error:", error, timestamp);
-    return '12:00 AM';
-  }
-}
-
-function getTodayDate() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, '0');
-  const day = String(today.getDate()).padStart(2, '0');
-  return `${day}-${month}-${year}`; // ফরম্যাট: DD-MM-YYYY
-}
-
-function formatDateToBangla(dateStr) {
-  if (!dateStr) return '';
-
-  try {
-    if (/^\d{2}-\d{2}-\d{4}$/.test(dateStr)) {
-      return dateStr; // ইতিমধ্যে DD-MM-YYYY ফরম্যাটে থাকলে রিটার্ন
-    }
-    const [year, month, day] = dateStr.split('-');
-    return `${day}-${month}-${year}`; // ফরম্যাট: DD-MM-YYYY
-  } catch (error) {
-    console.error("Date formatting error:", error, dateStr);
-    return dateStr;
-  }
-}
-
-function findBestMatchingSubject(subjectFromSheet) {
-  if (!subjectFromSheet) return null;
-
-  const cleanSubject = subjectFromSheet.toString().trim();
-  for (const availableSubject of availableSubjects) {
-    if (cleanSubject === availableSubject) {
-      return availableSubject;
-    }
-  }
-  return cleanSubject;
-}
-
-async function fetchData() {
-  try {
-    updateLoadingProgress(30);
-    const res = await fetch(API_URL, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    if (!res.ok) {
-      throw new Error(`HTTP error! status: ${res.status}`);
-    }
-
-    updateLoadingProgress(60);
-    const data = await res.json();
-    if (data && data.ok) {
-      updateLoadingProgress(90);
-      console.log("API Response:", data);
-      return data.rows || [];
-    } else {
-      throw new Error(data.error || "ডেটা লোড করতে সমস্যা");
-    }
-  } catch (error) {
-    console.error("ডেটা লোড করতে সমস্যা:", error);
-    showNotification("ডেটা লোড করা যায়নি: " + error.message, true);
-    return [];
-  }
-}
-
-function normalizeRows(rows) {
-  try {
-    updateLoadingProgress(40);
-    // Sort all rows by timestamp ascending for global tracking ID
-    const sortedRows = rows.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
-
-    // Assign global tracking ID
-    sortedRows.forEach((row, index) => {
-      row.globalId = index + 1;
-    });
-
-    updateLoadingProgress(60);
-    // Group by subject for display serial
-    const groupedBySubject = sortedRows.reduce((acc, row) => {
-      const subjectFromSheet = row.subject || 'Unknown Subject';
-      const matchedSubject = findBestMatchingSubject(subjectFromSheet) || subjectFromSheet;
-      if (!acc[matchedSubject]) {
-        acc[matchedSubject] = [];
-      }
-      acc[matchedSubject].push(row);
-      return acc;
-    }, {});
-
-    const specialFolders = ["মিশন", "ক্লাসের লেকচার শীট", "পরীক্ষার রেজাল্ট শীট", "অন্যান্য"];
-
-    const normalizedRows = [];
-    Object.keys(groupedBySubject).forEach(subject => {
-      const subjectRows = groupedBySubject[subject].sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
-      subjectRows.forEach((row, index) => {
-        const timestamp = row.timestamp || '';
-        let link = row.link || '#';
-        if (specialFolders.includes(subject)) {
-          link = row.file || row.link || '#';
+        // Render Services
+        function renderServices(servicesToRender) {
+            const grid = document.getElementById('servicesGrid');
+            grid.innerHTML = '';
+            
+            servicesToRender.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'service-card';
+                card.setAttribute('data-category', service.category);
+                card.onclick = () => openModal(service);
+                
+                card.innerHTML = `
+                    <span class="service-number">#${service.id}</span>
+                    <div class="service-icon">${service.icon}</div>
+                    <div class="service-title">${service.title}</div>
+                `;
+                
+                grid.appendChild(card);
+            });
         }
-        const title = row.title || (subject === 'মিশন' ? 'মিশন' : subject === 'ইক্সাম' ? 'ইক্সাম' : 'ক্লাস ভিডিও');
-        const date = getDateFromTimestamp(timestamp);
-        const time = getTimeFromTimestamp(timestamp);
-        const displaySerial = index + 1;
-        const type = specialFolders.includes(subject) ? 'special' : subject === 'মিশন' ? 'mission' : subject === 'ইক্সাম' ? 'exam' : 'class';
 
-        normalizedRows.push({
-          subject: subject,
-          originalSubject: row.subject,
-          link: link,
-          title: title,
-          date: date,
-          time: time,
-          displaySerial: displaySerial,
-          timestamp: timestamp,
-          globalId: row.globalId,
-          type: type
+        // Filter by Category
+        function filterCategory(category) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Search Functionality
+        document.getElementById('searchInput')?.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = services.filter(service => 
+                service.title.toLowerCase().includes(searchTerm)
+            );
+            renderServices(filtered);
         });
-      });
-    });
 
-    updateLoadingProgress(80);
-    return normalizedRows;
-  } catch (error) {
-    console.error("Rows normalization error:", error);
-    return [];
-  }
-}
-
-function isExamTimeExpired(timestamp) {
-  if (!timestamp) return false;
-  try {
-    const examTime = new Date(timestamp).getTime();
-    const now = new Date().getTime();
-    const twentyFourHoursInMs = 24 * 60 * 60 * 1000;
-    return (now - examTime) > twentyFourHoursInMs;
-  } catch (error) {
-    console.error("Exam expiry check error:", error, timestamp);
-    return false;
-  }
-}
-
-function filterClassesByTimeRange(range) {
-  const now = new Date();
-  const today = getTodayDate(); // DD-MM-YYYY ফরম্যাটে আজকের তারিখ
-
-  if (range === 'today') {
-    return allClasses.filter(cls => cls && cls.date === today);
-  } else if (range === 'all') {
-    return allClasses;
-  }
-
-  const weekAgo = new Date(now.setDate(now.getDate() - 7));
-  const monthAgo = new Date(now.setMonth(now.getMonth() - 1));
-
-  return allClasses.filter(cls => {
-    if (!cls || !cls.date) return false;
-    const classDateParts = cls.date.split('-'); // DD-MM-YYYY ফরম্যাট
-    const classDate = new Date(`${classDateParts[2]}-${classDateParts[1]}-${classDateParts[0]}`);
-    
-    if (range === 'week') {
-      return classDate >= weekAgo && classDate <= new Date();
-    } else if (range === 'month') {
-      return classDate >= monthAgo && classDate <= new Date();
-    }
-    return true;
-  });
-}
-
-function groupClassesBySubject(classes) {
-  if (groupedClassesCache[JSON.stringify(classes)]) {
-    return groupedClassesCache[JSON.stringify(classes)];
-  }
-
-  const grouped = classes.reduce((acc, cls) => {
-    if (!cls || !cls.subject) return acc;
-    if (!acc[cls.subject]) {
-      acc[cls.subject] = [];
-    }
-    acc[cls.subject].push(cls);
-    return acc;
-  }, {});
-
-  // প্রতিটি সাবজেক্টের ক্লাসগুলোকে টাইমস্ট্যাম্প অনুযায়ী সাজানো (নতুন থেকে পুরানো)
-  Object.keys(grouped).forEach(subject => {
-    grouped[subject].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-  });
-
-  groupedClassesCache[JSON.stringify(classes)] = grouped;
-  return grouped;
-}
-
-function renderTodayClassesSummary(classes) {
-  const container = $('#today-classes-body');
-  const sortValue = $('#sort-classes').value;
-
-  if (!classes || classes.length === 0) {
-    container.innerHTML = `<tr><td colspan="3" class="bangla-font" style="text-align: center; padding: 20px;">আজকের জন্য কোন ক্লাস পাওয়া যায়নি</td></tr>`;
-    return;
-  }
-
-  let tableHTML = '';
-  classes.forEach(cls => {
-    if (!cls) return;
-    const displayValue = sortValue === 'today' ? cls.time : cls.date;
-    tableHTML += `
-      <tr data-subject="${cls.subject}" data-timestamp="${cls.timestamp}">
-        <td><span class="subject-badge bangla-font">${cls.subject}</span></td>
-        <td class="class-info bangla-font">${cls.title}</td>
-        <td class="bangla-font">${displayValue}</td>
-      </tr>
-    `;
-  });
-  container.innerHTML = tableHTML;
-
-  $all('#today-classes-body tr').forEach(row => {
-    row.addEventListener('click', () => {
-      const subject = row.getAttribute('data-subject');
-      highlightedClassTimestamp = row.getAttribute('data-timestamp');
-      showSubjectPage(subject, true);
-    });
-  });
-}
-
-function renderCards(rows, root) {
-  if (!rows || rows.length === 0) {
-    root.innerHTML = '<div class="empty-state"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><p class="bangla-font">কোন ক্লাস পাওয়া যায়নি</p></div>';
-    return;
-  }
-
-  root.innerHTML = '';
-  rows.forEach(r => {
-    if (!r) return;
-
-    const specialFolders = ["ক্লাসের লেকচার শীট", "পরীক্ষার রেজাল্ট শীট", "অন্যান্য"];
-    let buttonText;
-    let isExpired = false;
-
-    if (specialFolders.includes(r.subject)) {
-      buttonText = "দেখুন";
-    } else if (r.subject === "মিশন") {
-      buttonText = "মিশন সম্পন্ন করুন";
-    } else if (r.subject === "ইক্সাম") {
-      buttonText = "পরীক্ষায় অংশগ্রহণ করুন";
-      isExpired = isExamTimeExpired(r.timestamp);
-    } else {
-      buttonText = "ক্লাস দেখুন";
-    }
-
-    const card = document.createElement('div');
-    card.className = 'card fade-in';
-    card.setAttribute('data-timestamp', r.timestamp);
-    if (highlightedClassTimestamp === r.timestamp) {
-      card.classList.add('highlight');
-      setTimeout(() => {
-        card.classList.remove('highlight');
-        highlightedClassTimestamp = null;
-      }, 5000);
-    }
-    const idPrefix = r.type === 'mission' ? 'm' : r.type === 'exam' ? 'e' : 'c';
-    const trackId = idPrefix + r.globalId;
-    const onclickAttr = `onclick="trackItem('${trackId}', '${r.type}')"`
-    card.innerHTML = `
-      <span class="card-badge bangla-font">ক্লাস ${r.displaySerial}</span>
-      <div class="subject"><i class="fas fa-book"></i> <span class="bangla-font">${r.subject}</span></div>
-      <div class="video-title bangla-font">${r.title}</div>
-      <div class="time"><i class="fas fa-clock"></i> ${r.time} | <span class="bangla-font">${r.date}</span></div>
-      ${r.subject === "ইক্সাম" && isExpired ? '<div class="exam-expiry-notice bangla-font"><i class="fas fa-exclamation-triangle"></i> পরীক্ষায় অংশগ্রহণ করার নির্দিষ্ট সময় শেষ হয়ে গেছে</div>' : ''}
-      <a class="btn" target="_blank" rel="noopener" href="${r.link}" ${onclickAttr}><i class="fas fa-play-circle"></i> <span class="bangla-font">${buttonText}</span></a>
-    `;
-    root.appendChild(card);
-  });
-}
-
-function filterTodayClasses(classes) {
-  const today = getTodayDate();
-  return classes.filter(cls => cls && cls.date === today);
-}
-
-function similarity(s1, s2) {
-  s1 = s1.toLowerCase();
-  s2 = s2.toLowerCase();
-  const m = s1.length;
-  const n = s2.length;
-  const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
-  for (let i = 0; i <= m; i++) dp[i][0] = i;
-  for (let j = 0; j <= n; j++) dp[0][j] = j;
-  for (let i = 1; i <= m; i++) {
-    for (let j = 1; j <= n; j++) {
-      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
-      dp[i][j] = Math.min(
-        dp[i - 1][j] + 1,
-        dp[i][j - 1] + 1,
-        dp[i - 1][j - 1] + cost
-      );
-    }
-  }
-  const distance = dp[m][n];
-  const maxLen = Math.max(m, n);
-  return maxLen ? (maxLen - distance) / maxLen : 0;
-}
-
-function maxWordSimilarity(searchTerm, title) {
-  const words = title.toLowerCase().split(/\s+/);
-  let maxSim = 0;
-  words.forEach(word => {
-    const sim = similarity(searchTerm, word);
-    if (sim > maxSim) maxSim = sim;
-  });
-  // Also check full title
-  const fullSim = similarity(searchTerm, title.toLowerCase());
-  return Math.max(maxSim, fullSim);
-}
-
-function renderSearchResults(results) {
-  const container = $('#search-results');
-  if (results.length === 0) {
-    container.style.display = 'none';
-    container.innerHTML = '';
-    return;
-  }
-  
-  container.style.display = 'flex';
-  container.innerHTML = '';
-  results.forEach(res => {
-    const item = document.createElement('div');
-    item.className = 'search-result-item';
-    item.innerHTML = `<span class="title bangla-font">${res.title}</span><span class="subject bangla-font">(${res.subject})</span>`;
-    item.addEventListener('click', () => {
-      highlightedClassTimestamp = res.timestamp;
-      showSubjectPage(res.subject, true);
-      container.innerHTML = '';
-      $('#search-subjects').value = '';
-      container.style.display = 'none';
-    });
-    container.appendChild(item);
-  });
-}
-
-async function loadInitialData() {
-  showLoadingOverlay(); // Show loading overlay
-  updateLoadingProgress(10);
-  if (!checkLoginExpiry()) {
-    logout();
-    return;
-  }
-
-  const rows = await fetchData();
-  updateLoadingProgress(95);
-  allClasses = normalizeRows(rows);
-  renderTodayClassesSummary(filterTodayClasses(allClasses));
-
-  showAddClassButton();
-  showDashboardButton();
-  
-  // Hide loading overlay after a short delay to ensure everything is loaded
-  setTimeout(() => {
-    hideLoadingOverlay();
-    updateLoadingProgress(0);
-  }, 100);
-}
-
-function showSubjectPage(subject, fromTable = false) {
-  currentSubject = subject;
-  mainScrollPosition = window.scrollY; // Save main page scroll position
-  history.pushState({ page: 'subject' }, ''); // Push state for back button
-  mainPage.style.display = 'none';
-  subjectPage.style.display = 'block';
-  $('#subject-title').innerHTML = `<i class="fas fa-book"></i> <span class="bangla-font">${subject}</span>`;
-  scrollToTop();
-
-  const classes = filterClassesByTimeRange('all');
-  const groupedClasses = groupClassesBySubject(classes);
-  const subjectClasses = groupedClasses[subject] || [];
-
-  const root = $('#classGrid');
-  renderCards(subjectClasses, root);
-
-  if (fromTable) {
-    const highlightedCard = $all('#classGrid .card').find(card => card.getAttribute('data-timestamp') === highlightedClassTimestamp);
-    if (highlightedCard) {
-      highlightedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
-
-  $('#search').value = '';
-}
-
-function returnToMainPage() {
-  subjectPage.style.display = 'none';
-  mainPage.style.display = 'block';
-  $('#search-subjects').value = '';
-  const pills = $all('.subject-link');
-  pills.forEach(pill => {
-    pill.style.display = 'flex';
-  });
-  window.scrollTo(0, mainScrollPosition); // Restore scroll position
-}
-
-function initializeEventListeners() {
-  $('#sort-classes').addEventListener('change', () => {
-    const range = $('#sort-classes').value;
-    const filteredClasses = filterClassesByTimeRange(range);
-    renderTodayClassesSummary(filteredClasses);
-  });
-
-  $('#search-subjects').addEventListener('input', () => {
-  const searchTerm = $('#search-subjects').value.trim().toLowerCase();
-  const resultsContainer = $('#search-results');
-  if (!searchTerm) {
-    resultsContainer.innerHTML = '';
-    resultsContainer.style.display = 'none';
-    return;
-  }
-  const filtered = allClasses
-    .map(cls => ({ ...cls, sim: maxWordSimilarity(searchTerm, cls.title) }))
-    .filter(res => res.sim > 0.3)
-    .sort((a, b) => b.sim - a.sim);
-  renderSearchResults(filtered);
-});
-
-  $all('.subject-link').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const subject = link.getAttribute('data-name');
-      showSubjectPage(subject);
-    });
-  });
-
-  $('#search').addEventListener('input', () => {
-    const searchTerm = $('#search').value.trim().toLowerCase();
-    const classes = filterClassesByTimeRange('all');
-    const groupedClasses = groupClassesBySubject(classes);
-    const subjectClasses = groupedClasses[currentSubject] || [];
-    const filteredClasses = subjectClasses.filter(cls => cls.title.toLowerCase().includes(searchTerm));
-    
-    const sortOrder = $('#sort').value;
-    if (sortOrder === 'asc') {
-      filteredClasses.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
-    } else {
-      filteredClasses.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-    }
-    
-    renderCards(filteredClasses, $('#classGrid'));
-  });
-
-  $('#sort').addEventListener('change', () => {
-    const searchTerm = $('#search').value.trim().toLowerCase();
-    const classes = filterClassesByTimeRange('all');
-    const groupedClasses = groupClassesBySubject(classes);
-    const subjectClasses = groupedClasses[currentSubject] || [];
-    const filteredClasses = subjectClasses.filter(cls => cls.title.toLowerCase().includes(searchTerm));
-    
-    const sortOrder = $('#sort').value;
-    if (sortOrder === 'asc') {
-      filteredClasses.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
-    } else {
-      filteredClasses.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-    }
-    
-    renderCards(filteredClasses, $('#classGrid'));
-  });
-
-  $('.back-button').addEventListener('click', e => {
-    e.preventDefault();
-    history.back(); // Use history back instead of direct hide/show
-  });
-
-  window.addEventListener('popstate', (event) => {
-    if (event.state && event.state.page === 'subject') {
-      showSubjectPage(currentSubject); // If popping to subject page
-    } else {
-      returnToMainPage(); // Back to main page
-    }
-  });
-
-  $('#refresh-data-btn').addEventListener('click', async () => {
-    showLoadingOverlay();
-    updateLoadingProgress(10);
-    const rows = await fetchData();
-    allClasses = normalizeRows(rows);
-    groupedClassesCache = {};
-    renderTodayClassesSummary(filterClassesByTimeRange($('#sort-classes').value));
-    
-    if (subjectPage.style.display === 'block' && currentSubject) {
-      showSubjectPage(currentSubject);
-    }
-    
-    hideLoadingOverlay();
-    showNotification("ডেটা রিফ্রেশ হয়েছে!");
-  });
-}
-
-/* Dashboard Script */
-const STORAGE_KEYS = {
-  STUDENT_NAME: 'dakhil26_student_name',
-  JOIN_DATE: 'dakhil26_join_date',
-  LAST_LOGIN: 'dakhil26_last_login',
-  LAST_ACTIVITY: 'dakhil26_last_activity',
-  COMPLETED_ITEMS: 'dakhil26_completed_items',
-  NOTES: 'dakhil26_notes'
-};
-
-const motivationalQuotes = [
-  "প্রতিদিনের ক্লাস প্রতিদিন করুন, সাফল্য আপনার কাছে আসবে! 🌟",
-  "ছোট ছোট পদক্ষেপই বড় সাফল্যের পথ তৈরি করে! 💪",
-  "নিয়মিত পড়াশোনা আপনাকে লক্ষ্যের কাছে নিয়ে যাবে! 🚀",
-  "প্রতিটি ক্লাস আপনাকে এক ধাপ এগিয়ে নেয়! 🏆"
-];
-
-const badges = [
-  { name: 'Starter', threshold: 0, class: 'badge-starter', icon: '🏁' },
-  { name: 'Bronze Cup', threshold: 30, class: 'badge-bronze', icon: '🥉' },
-  { name: 'Silver Cup', threshold: 50, class: 'badge-silver', icon: '🥈' },
-  { name: 'Gold Cup', threshold: 65, class: 'badge-gold', icon: '🥇' },
-  { name: 'Platinum Trophy', threshold: 80, class: 'badge-platinum', icon: '🏆' }
-];
-
-function parseDate(dateStr) {
-  if (!dateStr) return new Date(0);
-  const [day, month, year] = dateStr.split('-').map(Number);
-  return new Date(year, month - 1, day);
-}
-
-function saveStudentData(name, joinDate, lastLogin, lastActivity, completedItems) {
-  localStorage.setItem(STORAGE_KEYS.STUDENT_NAME, name || 'শিক্ষার্থী');
-  localStorage.setItem(STORAGE_KEYS.JOIN_DATE, joinDate || getTodayDate());
-  localStorage.setItem(STORAGE_KEYS.LAST_LOGIN, lastLogin || new Date().toISOString());
-  localStorage.setItem(STORAGE_KEYS.LAST_ACTIVITY, lastActivity || new Date().toISOString());
-  localStorage.setItem(STORAGE_KEYS.COMPLETED_ITEMS, JSON.stringify(completedItems || []));
-}
-
-function getStudentData() {
-  return {
-    name: localStorage.getItem(STORAGE_KEYS.STUDENT_NAME) || 'শিক্ষার্থী',
-    joinDate: localStorage.getItem(STORAGE_KEYS.JOIN_DATE) || getTodayDate(),
-    lastLogin: localStorage.getItem(STORAGE_KEYS.LAST_LOGIN) || new Date().toISOString(),
-    lastActivity: localStorage.getItem(STORAGE_KEYS.LAST_ACTIVITY) || new Date().toISOString(),
-    completedItems: JSON.parse(localStorage.getItem(STORAGE_KEYS.COMPLETED_ITEMS)) || []
-  };
-}
-
-// Tracking function
-window.trackItem = function(id, type) {
-  const studentData = getStudentData();
-  let completed = studentData.completedItems;
-  if (completed.includes(id)) {
-    return; // Already completed
-  }
-
-  if (type === 'class') {
-    let scrolled = false;
-    const scrollListener = () => { scrolled = true; };
-    window.addEventListener('scroll', scrollListener);
-
-    const minTime = 0; // seconds
-    const maxTime = 0; // 7 minutes in seconds
-    const randomTime = Math.random() * (maxTime - minTime) + minTime;
-
-    setTimeout(() => {
-      window.removeEventListener('scroll', scrollListener);
-      if (!scrolled) {
-        completed.push(id);
-        saveStudentData(studentData.name, studentData.joinDate, new Date().toISOString(), new Date().toISOString(), completed);
-        showNotification(`${type} সম্পন্ন হয়েছে!`, false);
-      } else {
-        showNotification('পেজ স্ক্রল হয়েছে, সম্পন্ন মনে করা হয়নি।', true);
-      }
-    }, randomTime * 1000);
-  } else {
-    // For missions and exams, complete immediately
-    completed.push(id);
-    saveStudentData(studentData.name, studentData.joinDate, new Date().toISOString(), new Date().toISOString(), completed);
-    showNotification(`${type} সম্পন্ন হয়েছে!`, false);
-  }
-};
-
-function getItemsFromAllClasses() {
-  const items = {
-    classes: [],
-    missions: [],
-    exams: []
-  };
-
-  allClasses.forEach(cls => {
-    const idPrefix = cls.type === 'mission' ? 'm' : cls.type === 'exam' ? 'e' : 'c';
-    const trackId = idPrefix + cls.globalId;
-    const item = { id: trackId, addDate: cls.date };
-    if (cls.type === 'mission') {
-      items.missions.push(item);
-    } else if (cls.type === 'exam') {
-      items.exams.push(item);
-    } else {
-      items.classes.push(item);
-    }
-  });
-
-  return items;
-}
-
-function calculateStats(joinDate, completed) {
-  const joinDateObj = parseDate(joinDate);
-  const items = getItemsFromAllClasses();
-
-  function filterItems(itemList, isAfter) {
-    return itemList.filter(item => {
-      const addDateObj = parseDate(item.addDate);
-      return isAfter ? addDateObj >= joinDateObj : addDateObj < joinDateObj;
-    });
-  }
-
-  const afterClasses = filterItems(items.classes, true);
-  const beforeClasses = filterItems(items.classes, false);
-  const afterMissions = filterItems(items.missions, true);
-  const beforeMissions = filterItems(items.missions, false);
-  const afterExams = filterItems(items.exams, true);
-  const beforeExams = filterItems(items.exams, false);
-
-  const doneAfterClasses = afterClasses.filter(item => completed.includes(item.id)).length;
-  const doneBeforeClasses = beforeClasses.filter(item => completed.includes(item.id)).length;
-  const doneAfterMissions = afterMissions.filter(item => completed.includes(item.id)).length;
-  const doneBeforeMissions = beforeMissions.filter(item => completed.includes(item.id)).length;
-  const doneAfterExams = afterExams.filter(item => completed.includes(item.id)).length;
-  const doneBeforeExams = beforeExams.filter(item => completed.includes(item.id)).length;
-
-  const totalAll = items.classes.length + items.missions.length + items.exams.length;
-  const totalCompleted = completed.length;
-  const progress = totalAll > 0 ? (totalCompleted / totalAll) * 100 : 0;
-
-  return {
-    after: {
-      totalClasses: afterClasses.length,
-      doneClasses: doneAfterClasses,
-      pendingClasses: afterClasses.length - doneAfterClasses,
-      totalMissions: afterMissions.length,
-      doneMissions: doneAfterMissions,
-      pendingMissions: afterMissions.length - doneAfterMissions,
-      totalExams: afterExams.length,
-      doneExams: doneAfterExams,
-      pendingExams: afterExams.length - doneAfterExams
-    },
-    before: {
-      totalClasses: beforeClasses.length,
-      doneClasses: doneBeforeClasses,
-      pendingClasses: beforeClasses.length - doneBeforeClasses,
-      totalMissions: beforeMissions.length,
-      doneMissions: doneBeforeMissions,
-      pendingMissions: beforeMissions.length - doneBeforeMissions,
-      totalExams: beforeExams.length,
-      doneExams: doneBeforeExams,
-      pendingExams: beforeExams.length - doneBeforeExams
-    },
-    progress: progress.toFixed(1)
-  };
-}
-
-function getCurrentBadge(progress) {
-  for (let i = badges.length - 1; i >= 0; i--) {
-    if (progress >= badges[i].threshold) {
-      return badges[i];
-    }
-  }
-  return badges[0];
-}
-
-function saveNotes(notes) {
-  localStorage.setItem(STORAGE_KEYS.NOTES, JSON.stringify(notes));
-}
-
-function getNotes() {
-  return JSON.parse(localStorage.getItem(STORAGE_KEYS.NOTES)) || [];
-}
-
-function renderNotes() {
-  const notesList = $('#notes-list');
-  const notes = getNotes();
-  notesList.innerHTML = '';
-  notes.forEach((note, index) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-      <span>${note}</span>
-      <button onclick="deleteNote(${index})">মুছে ফেলুন</button>
-    `;
-    notesList.appendChild(li);
-  });
-}
-
-window.deleteNote = function(index) {
-  let notes = getNotes();
-  notes.splice(index, 1);
-  saveNotes(notes);
-  renderNotes();
-};
-
-function showDashboard() {
-  const studentData = getStudentData();
-  const isNewUser = !localStorage.getItem(STORAGE_KEYS.STUDENT_NAME);
-  const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
-  const stats = calculateStats(studentData.joinDate, studentData.completedItems);
-  const currentBadge = getCurrentBadge(stats.progress);
-  const lastActivityDate = new Date(studentData.lastActivity);
-  const daysSinceActivity = (new Date() - lastActivityDate) / (1000 * 60 * 60 * 24);
-
-  const dashboardBody = $('#dashboard-body');
-  dashboardBody.innerHTML = `
-    ${isNewUser ? `
-      <div class="alert-box success bangla-font">
-        <i class="fas fa-info-circle"></i> আপনার নাম লিখুন এবং ড্যাশবোর্ড কাস্টমাইজ করুন!
-      </div>
-      <form class="name-input-form">
-        <input type="text" id="student-name-input" placeholder="আপনার নাম লিখুন" class="bangla-font">
-        <button type="submit" class="bangla-font">নাম সংরক্ষণ করুন</button>
-      </form>
-    ` : `
-      <header class="modal-header bangla-font">
-        <h2>স্বাগতম, ${studentData.name}!</h2>
-        <div class="badge-current ${currentBadge.class}" id="current-badge">${currentBadge.icon} ${currentBadge.name}</div>
-        <div id="close-btn" class="close-btn">✕</div>
-      </header>
-
-      <section class="motivation">
-        <p id="motivation-text" class="bangla-font">${randomQuote}</p>
-      </section>
-
-      <section class="stats after-join bangla-font">
-        <h2>জয়েন-এর পর</h2>
-        <table class="stats-table">
-          <thead>
-            <tr>
-              <th>আইটেম</th>
-              <th>মোট</th>
-              <th>সম্পন্ন</th>
-              <th>বাকি</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ক্লাস</td>
-              <td class="total">${stats.after.totalClasses}</td>
-              <td class="done">${stats.after.doneClasses}</td>
-              <td class="pending">${stats.after.pendingClasses}</td>
-            </tr>
-            <tr>
-              <td>মিশন</td>
-              <td class="total">${stats.after.totalMissions}</td>
-              <td class="done">${stats.after.doneMissions}</td>
-              <td class="pending">${stats.after.pendingMissions}</td>
-            </tr>
-            <tr>
-              <td>পরীক্ষা</td>
-              <td class="total">${stats.after.totalExams}</td>
-              <td class="done">${stats.after.doneExams}</td>
-              <td class="pending">${stats.after.pendingExams}</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="stats before-join bangla-font">
-        <h2>জয়েন-এর আগে</h2>
-        <table class="stats-table">
-          <thead>
-            <tr>
-              <th>আইটেম</th>
-              <th>মোট</th>
-              <th>সম্পন্ন</th>
-              <th>বাকি</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ক্লাস</td>
-              <td class="total">${stats.before.totalClasses}</td>
-              <td class="done">${stats.before.doneClasses}</td>
-              <td class="pending">${stats.before.pendingClasses}</td>
-            </tr>
-            <tr>
-              <td>মিশন</td>
-              <td class="total">${stats.before.totalMissions}</td>
-              <td class="done">${stats.before.doneMissions}</td>
-              <td class="pending">${stats.before.pendingMissions}</td>
-            </tr>
-            <tr>
-              <td>পরীক্ষা</td>
-              <td class="total">${stats.before.totalExams}</td>
-              <td class="done">${stats.before.doneExams}</td>
-              <td class="pending">${stats.before.pendingExams}</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="alarms" class="alarms bangla-font"></section>
-
-      <section class="progress-section bangla-font">
-        <h3>সম্মক অগ্রগতি</h3>
-        <div class="progress-bar">
-          <div class="progress-bar-fill" style="width: ${stats.progress}%"></div>
-        </div>
-        <p>${stats.progress}%</p>
-      </section>
-
-      <div class="badges-dropdown bangla-font">
-        <label for="badges-select">ব্যাজসমূহ:</label>
-        <select id="badges-select">
-          ${badges.map(badge => `
-            <option ${stats.progress >= badge.threshold ? '' : 'disabled'}>${badge.icon} ${badge.name} ${stats.progress >= badge.threshold ? '(প্রাপ্ত)' : '(লক)'}</option>
-          `).join('')}
-        </select>
-      </div>
-
-      <section class="notes-section bangla-font">
-        <h3>আমার নোটস</h3>
-        <textarea id="note-input" placeholder="নতুন নোট লিখুন..."></textarea>
-        <button id="add-note-btn">নোট যোগ করুন</button>
-        <ul id="notes-list"></ul>
-      </section>
-    `}
-  `;
-
-  if (isNewUser) {
-    const form = dashboardBody.querySelector('.name-input-form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nameInput = $('#student-name-input').value.trim();
-      if (nameInput) {
-        saveStudentData(nameInput, getTodayDate(), new Date().toISOString(), new Date().toISOString(), []);
-        showNotification('নাম সফলভাবে সংরক্ষিত হয়েছে!', false);
-        showDashboard();
-      } else {
-        showNotification('অনুগ্রহ করে একটি বৈধ নাম লিখুন', true);
-      }
-    });
-  } else {
-    // Update last login
-    localStorage.setItem(STORAGE_KEYS.LAST_LOGIN, new Date().toISOString());
-
-    // Alarms
-    const alarms = $('#alarms');
-    if (stats.before.pendingClasses + stats.before.pendingMissions + stats.before.pendingExams > 0) {
-      alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> জয়েনের আগের ক্লাস, মিশন এবং পরীক্ষাগুলো নিজ দায়িত্বে সম্পন্ন করুন যতক্ষণ না সবগুলো শেষ হয়।</div>`;
-    }
-    if (daysSinceActivity > 7) {
-      alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> আপনি টানা ১ সপ্তাহের বেশি ক্লাস করেননি! আজকের ক্লাস বক্সে গিয়ে সপ্তাহের ক্লাস সিলেক্ট করে প্রতিটা ক্লাস করে নিন।</div>`;
-    }
-    if (daysSinceActivity > 30) {
-      alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> আপনি টানা ১ মাসের বেশি ক্লাস করেননি! আজকের ক্লাস বক্সে গিয়ে মাসের ক্লাস সিলেক্ট করে প্রতিটা ক্লাস করে নিন।</div>`;
-    }
-    if (stats.progress < 10 && !isNewUser) {
-      alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> আপনার অগ্রগতি খুব কম! নিয়মিত ক্লাস করে অগ্রসর হোন।</div>`;
-    }
-    if (stats.after.pendingClasses > 5) {
-      alarms.innerHTML += `<div class="alert-box warning"><i class="fas fa-exclamation-triangle"></i> জয়েনের পরের ক্লাসগুলোতে অনেক বাকি! দ্রুত সম্পন্ন করুন।</div>`;
-    }
-
-    // Close button
-    const closeBtn = $('#close-btn');
-    closeBtn.addEventListener('click', () => {
-      const dashboardModal = $('#dashboard-modal');
-      dashboardModal.classList.remove('show');
-    });
-
-    // Notes functionality
-    renderNotes();
-    const addNoteBtn = $('#add-note-btn');
-    addNoteBtn.addEventListener('click', () => {
-      const noteInput = $('#note-input');
-      const noteText = noteInput.value.trim();
-      if (noteText) {
-        let notes = getNotes();
-        notes.push(noteText);
-        saveNotes(notes);
-        renderNotes();
-        noteInput.value = '';
-        showNotification('নোট যোগ করা হয়েছে!', false);
-      } else {
-        showNotification('অনুগ্রহ করে নোট লিখুন', true);
-      }
-    });
-  }
-
-  const dashboardModal = $('#dashboard-modal');
-  dashboardModal.classList.add('show');
-}
-
-const dashboardBtn = $('#dashboard-btn');
-dashboardBtn.addEventListener('click', () => {
-  showDashboard();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  if (checkLoginExpiry()) {
-    loginPage.style.display = 'none';
-    mainPage.style.display = 'block';
-    loadInitialData();
-    showAddClassButton();
-    showDashboardButton();
-  } else {
-    loginPage.style.display = 'flex';
-    mainPage.style.display = 'none';
-    subjectPage.style.display = 'none';
-  }
-  initializeEventListeners();
-  
-  // Initialize dynamic placeholder
-  initDynamicPlaceholder();
-});
-  </script>
-  <script>
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzEX1EuBWpSMlZ9zbXs1lAVQkOTdeV779SsD6SF6RllQGMYxcHJu30p5BPzW7O-PAbysg/exec";
-
-function showNotification(message, isError=false){
-  const notification = $('#notification');
-  notification.innerHTML = `<i class="${isError?'fas fa-exclamation-circle':'fas fa-check-circle'}"></i> <span class="bangla-font">${message}</span>`;
-  notification.className=`notification ${isError?'error':'success'}`;
-  notification.classList.add('show');
-  setTimeout(()=>notification.classList.remove('show'),3000);
-}
-
-let storedName = localStorage.getItem('userName') || '';
-
-function showNameModal(){ $('#nameModal').style.display='flex'; }
-function hideNameModal(){ $('#nameModal').style.display='none'; }
-
-function saveName(event){
-  event.preventDefault();
-  const name = $('#userName').value.trim();
-  if (name) {
-    localStorage.setItem('userName', name);
-    storedName = name;
-    hideNameModal();
-    showForm();
-  } else {
-    showNotification("নাম লিখুন!", true);
-  }
-}
-
-function handleFormClick() {
-  if (!storedName) {
-    showNameModal();
-  } else {
-    showForm();
-  }
-}
-
-function showForm(){ 
-  $('#formModal').style.display='flex'; 
-  $('#myForm').reset(); 
-  $('#name').value = storedName;
-}
-
-function hideForm(){ $('#formModal').style.display='none'; }
-
-function showSubmissions(){ 
-  $('#submissionsModal').style.display='flex'; 
-  
-  // শুধু এই ১ লাইন যোগ করুন
-  $('#submissions-list').innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">লোড হচ্ছে...</div>';
-  
-  loadSubmissions(); 
-    }
-
-function hideSubmissions(){ $('#submissionsModal').style.display='none'; }
-
-function submitForm(event){
-  event.preventDefault();
-  const submitBtn = $('#submitBtn');
-  submitBtn.classList.add('loading');
-  submitBtn.disabled = true;
-  const form = $('#myForm');
-  const data = {
-    name: form.name.value.trim(),
-    batch: form.batch.value,
-    message: form.message.value.trim()
-  };
-
-  fetch(WEB_APP_URL,{
-    method:'POST',
-    body:JSON.stringify(data)
-  })
-  .then(res=>res.text())
-  .then(txt=>{
-    submitBtn.classList.remove('loading');
-    submitBtn.disabled = false;
-    if(txt.startsWith("Success")){
-      form.reset(); hideForm(); showSuccessMessage();
-    }else {
-      showNotification("ডেটা জমা হয়নি! আবার চেষ্টা করুন।", true);
-    }
-  })
-  .catch(()=>{
-    submitBtn.classList.remove('loading');
-    submitBtn.disabled = false;
-    showNotification("ডেটা জমা হয়নি! আবার চেষ্টা করুন।", true);
-  });
-}
-
-function showSuccessMessage(){
-  const successMessage = $('#successMessage');
-  successMessage.style.display='block';
-  setTimeout(()=>successMessage.style.display='none',3000);
-}
-
-function loadSubmissions() {
-  fetch(WEB_APP_URL + '?action=getSubmissions')
-    .then(res => res.json())
-    .then(data => {
-      const list = $('#submissions-list');
-      list.innerHTML = '';
-      
-      // শুধুমাত্র Dakhil-26 ব্যাচ ফিল্টার করুন
-      const dakhil26Submissions = data.filter(item => 
-        item.batch && item.batch.toString().toLowerCase().includes('dakhil-26')
-      );
-      
-      // নতুন থেকে পুরানো সাজানো
-      dakhil26Submissions.sort((a, b) => new Date(b.timestamp || b.time) - new Date(a.timestamp || a.time));
-      
-      if (dakhil26Submissions.length === 0) {
-        list.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted)" class="bangla-font">Dakhil-26 ব্যাচের কোন সাবমিশন নেই</div>';
-        return;
-      }
-      
-      dakhil26Submissions.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'submission-item';
-        div.innerHTML = `
-          <div class="submission-name bangla-font">${item.name}</div>
-          <div class="submission-batch bangla-font">ব্যাচ: ${item.batch}</div>
-          <div class="submission-message bangla-font">${item.message}</div>
-          ${item.reply ? `<div class="submission-reply bangla-font">উত্তর: ${item.reply}</div>` : ''}
-          <div class="submission-time bangla-font">${item.time}</div>
-        `;
-        list.appendChild(div);
-      });
-    })
-    .catch(() => showNotification("সাবমিশন লোড হয়নি! আবার চেষ্টা করুন।", true));
-    }
-$('#form-button').addEventListener('click', handleFormClick);
-$('#submissions-button').addEventListener('click',showSubmissions);
-window.addEventListener('click',(e)=>{ 
-  if(e.target==$('#nameModal')) hideNameModal(); 
-  if(e.target==$('#formModal')) hideForm(); 
-  if(e.target==$('#submissionsModal')) hideSubmissions(); 
-});
-</script>
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Notice bar code
-  const noticeBar = document.querySelector('.notice-bar');
-  const noticeSpan = document.querySelector('.notice-bar span');
-  
-  if (noticeBar && noticeSpan) {
-    noticeBar.style.visibility = 'visible';
-    noticeBar.style.opacity = '1';
-    
-    setTimeout(() => {
-      noticeSpan.style.animation = 'none';
-      void noticeSpan.offsetWidth;
-      noticeSpan.style.animation = 'marquee 40s linear infinite 0s';
-    }, 10);
-  }
-
-  // Button visibility - with page reload check
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('refreshed')) {
-    // Already refreshed, proceed normally
-    setButtonVisibility();
-  } else {
-    // First load, add parameter and reload
-    urlParams.set('refreshed', 'true');
-    window.location.search = urlParams.toString();
-  }
-
-  // Initialize Clock
-  updateClock();
-  setInterval(updateClock, 1000);
-});
-
-function updateClock() {
-  const now = new Date();
-  const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-
-  // Time and date in Bengali
-  let timeStr = now.toLocaleTimeString('bn-BD', timeOptions); // Bengali digits for time
-  timeStr = timeStr.replace(/(AM|PM)/, '<small>$1</small>'); // Make AM/PM smaller
-  const dateStr = now.toLocaleDateString('bn-BD', dateOptions); // Bengali date
-
-  const clockTime = document.getElementById('clock-time');
-  const clockDate = document.getElementById('clock-date');
-  const examCountdown = document.getElementById('exam-countdown');
-
-  if (clockTime && clockDate && examCountdown) {
-    clockTime.innerHTML = timeStr; // Use innerHTML for <small> tag
-    clockDate.textContent = dateStr;
-
-    // Exam Countdown
-    const examDate = new Date(2026, 1, 8); // 08-02-2026 (Month is 0-indexed, so 1 = February)
-    let diff = examDate - now;
-
-    if (diff < 0) {
-      examCountdown.textContent = 'পরীক্ষা শুরু হয়েছে!';
-    } else {
-      const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
-      const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-      examCountdown.textContent = `বোর্ড পরীক্ষা শুরু: ${months} মাস ${days} দিন পর*`;
-    }
-  }
-}
-
-function setButtonVisibility() {
-  const role = getUserRole();
-  const formButton = $('#form-button');
-  const submissionsButton = $('#submissions-button');
-  
-  // Reset both first
-  formButton.style.display = 'none';
-  submissionsButton.style.display = 'none';
-  
-  if (role === 'user' || role === 'editor') {
-    formButton.style.display = 'inline-flex';
-  } 
-  if (role === 'owner' || role === 'editor') {
-    submissionsButton.style.display = 'inline-flex';
-  }
-}
-
-// Dynamic placeholder functionality
-function initDynamicPlaceholder() {
-  const searchInput = $('#search-subjects');
-  const placeholders = [
-    'সার্চ করুন🔎',
-    'কি খুজছেন?🤔',
-    'সাজেশন্স🔥',
-    'জিন্স সাজেশন্স💥',
-    '👉ক্লাস',
-    '💡মিশন',
-    '👉ইক্সাম',
-    'শীট🗞',
-  ];
-  
-  let currentIndex = 0;
-  
-  // Function to update placeholder
-  function updatePlaceholder() {
-    searchInput.placeholder = placeholders[currentIndex];
-    currentIndex = (currentIndex + 1) % placeholders.length;
-  }
-  
-  // Update every 3 seconds
-  setInterval(updatePlaceholder, 4000);
-  
-  // Initialize with first placeholder
-  updatePlaceholder();
-}
-</script>
+        // Open Modal
+        function openModal(service) {
+            currentService = service;
+            document.getElementById('modalTitle').textContent = service.title;
+            document.getElementById('modalDescription').textContent = getServiceDescription(service.type);
+            document.getElementById('serviceModal').classList.add('active');
+            document.getElementById('downloadBtn').style.display = 'none';
+            document.getElementById('previewContainer').innerHTML = '<p style="color: #64748b;">প্রিভিউ এখানে দেখাবে</p>';
+            
+            // Setup controls based on service type
+            setupControls(service.type);
+            uploadedFiles = [];
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('serviceModal').classList.remove('active');
+            uploadedFiles = [];
+            processedResult = null;
+        }
+
+        // Get Service Description
+        function getServiceDescription(type) {
+            const descriptions = {
+                'passport': 'পাসপোর্ট সাইজের ছবি তৈরি করুন (৩.৫×৪.৫ সেমি)',
+                'visa-photo': 'ভিসার জন্য নির্দিষ্ট সাইজের ছবি',
+                'signature': 'সিগনেচার কাট করে ব্যাকগ্রাউন্ড সাদা করুন',
+                'bg-color': 'ছবির ব্যাকগ্রাউন্ড রঙ পরিবর্তন করুন',
+                'enhance': 'ছবি পরিষ্কার এবং হোয়াইট ব্যালান্স ঠিক করুন',
+                'dpi': 'ছবির DPI ৩০০ বা ৩৬০ তে সেট করুন',
+                'compress': 'ছবি ১০০KB বা ৫০KB এ কমপ্রেস করুন',
+                'pdf-merge': 'একাধিক PDF ফাইল একত্রিত করুন',
+                'pdf-split': 'PDF ফাইল আলাদা পেজে ভাগ করুন',
+                'jpg-to-pdf': 'ছবি থেকে PDF তৈরি করুন'
+            };
+            return descriptions[type] || 'আপনার ফাইল আপলোড করুন এবং প্রসেস করুন';
+        }
+
+        // Setup Controls
+        function setupControls(type) {
+            const controlsArea = document.getElementById('controlsArea');
+            controlsArea.innerHTML = '';
+            
+            if (type === 'passport' || type === 'visa-photo' || type === 'custom-size') {
+                controlsArea.innerHTML = `
+                    <div class="control-group">
+                        <label>প্রস্থ (সেমি)</label>
+                        <input type="number" id="width" value="3.5" step="0.1">
+                    </div>
+                    <div class="control-group">
+                        <label>উচ্চতা (সেমি)</label>
+                        <input type="number" id="height" value="4.5" step="0.1">
+                    </div>
+                `;
+            }
+            
+            if (type === 'bg-color') {
+                controlsArea.innerHTML = `
+                    <div class="control-group">
+                        <label>ব্যাকগ্রাউন্ড রঙ নির্বাচন করুন</label>
+                        <div class="color-picker">
+                            <div class="color-option selected" style="background: white;" onclick="selectColor('white')"></div>
+                            <div class="color-option" style="background: #4A90E2;" onclick="selectColor('blue')"></div>
+                            <div class="color-option" style="background: #FFB6C1;" onclick="selectColor('pink')"></div>
+                            <div class="color-option" style="background: #F0F0F0;" onclick="selectColor('gray')"></div>
+                            <div class="color-option" style="background: #FFE4B5;" onclick="selectColor('cream')"></div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            if (type === 'compress') {
+                controlsArea.innerHTML = `
+                    <div class="control-group">
+                        <label>সর্বোচ্চ সাইজ</label>
+                        <select id="targetSize">
+                            <option value="100">১০০ KB</option>
+                            <option value="50">৫০ KB</option>
+                            <option value="200">২০০ KB</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>কোয়ালিটি</label>
+                        <input type="range" id="quality" min="1" max="100" value="80">
+                    </div>
+                `;
+            }
+            
+            if (type === 'dpi') {
+                controlsArea.innerHTML = `
+                    <div class="control-group">
+                        <label>DPI নির্বাচন করুন</label>
+                        <select id="dpiValue">
+                            <option value="300">৩০০ DPI</option>
+                            <option value="360">৩৬০ DPI</option>
+                            <option value="600">৬০০ DPI</option>
+                        </select>
+                    </div>
+                `;
+            }
+            
+            if (type === 'multiple') {
+                controlsArea.innerHTML = `
+                    <div class="control-group">
+                        <label>কপি সংখ্যা</label>
+                        <input type="number" id="copies" value="6" min="1" max="20">
+                    </div>
+                    <div class="control-group">
+                        <label>কাগজের সাইজ</label>
+                        <select id="paperSize">
+                            <option value="a4">A4</option>
+                            <option value="letter">Letter</option>
+                        </select>
+                    </div>
+                `;
+            }
+        }
+
+        // Select Color
+        let selectedColor = 'white';
+        function selectColor(color) {
+            selectedColor = color;
+            document.querySelectorAll('.color-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            event.target.classList.add('selected');
+        }
+
+        // Setup Event Listeners
+        function setupEventListeners() {
+            const fileInput = document.getElementById('fileInput');
+            const uploadArea = document.getElementById('uploadArea');
+            
+            fileInput.addEventListener('change', handleFileSelect);
+            
+            // Drag and Drop
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('dragover');
+            });
+            
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('dragover');
+            });
+            
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+                const files = e.dataTransfer.files;
+                handleFiles(files);
+            });
+        }
+
+        // Handle File Select
+        function handleFileSelect(e) {
+            const files = e.target.files;
+            handleFiles(files);
+        }
+
+        // Handle Files
+        function handleFiles(files) {
+            uploadedFiles = Array.from(files);
+            
+            if (uploadedFiles.length > 0) {
+                const file = uploadedFiles[0];
+                
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const preview = document.getElementById('previewContainer');
+                        preview.innerHTML = `<img src="${e.target.result}" class="preview-image" id="previewImage">`;
+                        showToast('ফাইল সফলভাবে আপলোড হয়েছে', 'success');
+                    };
+                    reader.readAsDataURL(file);
+                } else if (file.type === 'application/pdf') {
+                    const preview = document.getElementById('previewContainer');
+                    preview.innerHTML = `<p style="color: var(--primary); font-size: 48px;">📄</p><p>${file.name}</p>`;
+                    showToast('PDF ফাইল আপলোড হয়েছে', 'success');
+                }
+            }
+        }
+
+        // Process File
+        async function processFile() {
+            if (uploadedFiles.length === 0) {
+                showToast('প্রথমে একটি ফাইল আপলোড করুন', 'error');
+                return;
+            }
+            
+            const loading = document.getElementById('loading');
+            const processBtn = document.getElementById('processBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            
+            loading.classList.add('active');
+            processBtn.disabled = true;
+            
+            // Simulate processing
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            const file = uploadedFiles[0];
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = document.getElementById('previewImage');
+            
+            if (img) {
+                canvas.width = img.naturalWidth;
+                canvas.height = img.naturalHeight;
+                
+                // Apply processing based on service type
+                switch(currentService.type) {
+                    case 'passport':
+                    case 'visa-photo':
+                        await processPassportPhoto(img, canvas, ctx);
+                        break;
+                    case 'bg-color':
+                        await processBackgroundColor(img, canvas, ctx);
+                        break;
+                    case 'signature':
+                        await processSignature(img, canvas, ctx);
+                        break;
+                    case 'enhance':
+                        await enhancePhoto(img, canvas, ctx);
+                        break;
+                    case 'compress':
+                        await compressImage(img, canvas, ctx);
+                        break;
+                    case 'multiple':
+                        await createMultipleCopies(img, canvas, ctx);
+                        break;
+                    default:
+                        ctx.drawImage(img, 0, 0);
+                }
+                
+                // Show processed result
+                const preview = document.getElementById('previewContainer');
+                preview.innerHTML = '';
+                preview.appendChild(canvas);
+                canvas.className = 'preview-image';
+                
+                processedResult = canvas;
+                downloadBtn.style.display = 'inline-flex';
+                showToast('প্রসেসিং সম্পন্ন হয়েছে!', 'success');
+            }
+            
+            loading.classList.remove('active');
+            processBtn.disabled = false;
+        }
+
+        // Process Passport Photo
+        async function processPassportPhoto(img, canvas, ctx) {
+            const width = parseFloat(document.getElementById('width')?.value || 3.5);
+            const height = parseFloat(document.getElementById('height')?.value || 4.5);
+            
+            // Convert cm to pixels (300 DPI)
+            const dpi = 300;
+            const pixelWidth = (width / 2.54) * dpi;
+            const pixelHeight = (height / 2.54) * dpi;
+            
+            canvas.width = pixelWidth;
+            canvas.height = pixelHeight;
+            
+            // Draw white background
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Calculate scaling
+            const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+            const x = (canvas.width / 2) - (img.width / 2) * scale;
+            const y = (canvas.height / 2) - (img.height / 2) * scale;
+            
+            ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
+        }
+
+        // Process Background Color
+        async function processBackgroundColor(img, canvas, ctx) {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            
+            // Draw colored background
+            const colors = {
+                'white': '#FFFFFF',
+                'blue': '#4A90E2',
+                'pink': '#FFB6C1',
+                'gray': '#F0F0F0',
+                'cream': '#FFE4B5'
+            };
+            
+            ctx.fillStyle = colors[selectedColor] || '#FFFFFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0);
+        }
+
+        // Process Signature
+        async function processSignature(img, canvas, ctx) {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.drawImage(img, 0, 0);
+            
+            // Apply threshold for signature extraction
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            
+            for (let i = 0; i < data.length; i += 4) {
+                const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                if (avg > 200) {
+                    data[i] = data[i + 1] = data[i + 2] = 255;
+                }
+            }
+            
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        // Enhance Photo
+        async function enhancePhoto(img, canvas, ctx) {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+            
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            
+            // Simple brightness and contrast enhancement
+            for (let i = 0; i < data.length; i += 4) {
+                data[i] = Math.min(255, data[i] * 1.1);
+                data[i + 1] = Math.min(255, data[i + 1] * 1.1);
+                data[i + 2] = Math.min(255, data[i + 2] * 1.1);
+            }
+            
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        // Compress Image
+        async function compressImage(img, canvas, ctx) {
+            const targetSize = parseInt(document.getElementById('targetSize')?.value || 100);
+            const quality = parseInt(document.getElementById('quality')?.value || 80) / 100;
+            
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+        }
+
+        // Create Multiple Copies
+        async function createMultipleCopies(img, canvas, ctx) {
+            const copies = parseInt(document.getElementById('copies')?.value || 6);
+            const paperSize = document.getElementById('paperSize')?.value || 'a4';
+            
+            // A4 dimensions at 300 DPI
+            const a4Width = 2480;
+            const a4Height = 3508;
+            
+            canvas.width = a4Width;
+            canvas.height = a4Height;
+            
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            const cols = 3;
+            const rows = Math.ceil(copies / cols);
+            const photoWidth = (a4Width - 100) / cols;
+            const photoHeight = photoWidth * (img.height / img.width);
+            const padding = 20;
+            
+            for (let i = 0; i < copies; i++) {
+                const col = i % cols;
+                const row = Math.floor(i / cols);
+                const x = 50 + col * (photoWidth + padding);
+                const y = 50 + row * (photoHeight + padding);
+                
+                ctx.drawImage(img, x, y, photoWidth, photoHeight);
+            }
+        }
+
+        // Download File
+        function downloadFile() {
+            if (!processedResult) {
+                showToast('কোনো ফাইল প্রসেস করা হয়নি', 'error');
+                return;
+            }
+            
+            const quality = parseFloat(document.getElementById('quality')?.value || 80) / 100;
+            
+            processedResult.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `processed-${currentService.title}-${Date.now()}.jpg`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                showToast('ফাইল ডাউনলোড শুরু হয়েছে', 'success');
+            }, 'image/jpeg', quality);
+        }
+
+        // Show Toast
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            const toastIcon = document.getElementById('toastIcon');
+            
+            toast.className = `toast ${type}`;
+            toastMessage.textContent = message;
+            toastIcon.textContent = type === 'success' ? '✅' : '❌';
+            
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Close modal on outside click
+        document.getElementById('serviceModal')?.addEventListener('click', function(e) {
+            if (e.target.id === 'serviceModal') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
